@@ -400,4 +400,7 @@ Compared to the `numpy` code, masking out absent classes is slightly different, 
 
 
 # Conclusions
-Hopefully this post was useful to understand standard semantic segmentation metrics such as Intersection over Union or the Dice coefficient, and to see how they can be implemented in Keras for use in advanced models. In case you missed it above, the python code is shared in its [GitHub gist](https://gist.github.com/ilmonteux/8340df952722f3a1030a7d937e701b5a), together with the Jupyter notebook used to generate all figures in this post. Stay tuned for the next post diving into popular deep learning models for semantic segmentation!
+The proposed model is still far from saturating the benchmark metrics. If complicated background are crossed, the model may miss  targets or may provide an imprecise bounding box. However, the model is based only on image processing methods for the task of crowd detection. In addition, no intelligence is behind the established process. 
+
+
+You can access the complete code via [GitHub gist](https://github.com/AsmaBRZ/Crowd-detection).
