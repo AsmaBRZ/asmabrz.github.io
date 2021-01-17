@@ -10,10 +10,10 @@ toc: false
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-In this post, I will present my works on crowd detection mostly using image processing. According to Google Scholar, 1460 papers have been published concerning crowd detection. There are myriad of areas where crowd detection intervene. The figure below show some of them.
+In this post, I will present my works on crowd detection. According to Google Scholar, 1460 papers have been published concerning crowd detection. There are myriad of areas where crowd detection intervene. The figure below show some of them.
 
 <p align="center">
-  <img width="460" height="300" src="/assets/images/crowd_detection/crowd_detection_app.png">
+  <img  src="/assets/images/crowd_detection/crowd_detection_app.png">
   <br>
   Figure 1:  Application of crowd detection in different areas.
 </p>
