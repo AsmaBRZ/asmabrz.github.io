@@ -14,8 +14,8 @@ feature_row:
     btn_class: "btn--primary"
   - image_path: /assets/images/teasers/cells-seg.png
     alt: "2016 election map and cartogram"
-    title: "Cells segmentation"
-    excerpt: "Segmentation of biomedical images using UNet++"
+    title: "Biomedical image segmentation"
+    excerpt: "Segmentation of biomedical images using Nested-Unet architecture (UNet++)."
     url: "https://image-classif.herokuapp.com/"
     btn_label: "Open"
     btn_class: "btn--primary"
