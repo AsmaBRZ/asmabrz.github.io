@@ -8,7 +8,7 @@ feature_row:
   - image_path: /assets/images/teasers/image_classif.png
     alt: "2016 election map and cartogram"
     title: "Image classification"
-    excerpt: "Classification of images containing dog, cat, truck..."
+    excerpt: "Classification of images containing dog, cat, truck...etc."
     url: "https://image-classif.herokuapp.com/"
     btn_label: "Open"
     btn_class: "btn--primary"
