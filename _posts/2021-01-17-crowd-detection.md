@@ -30,7 +30,7 @@ According to Google Scholar, 1460 papers have been up to now published concernin
 </p>
 
 
-# Conclusions
+# Conclusion
 The proposed model is still far from saturating the benchmark metrics. If complicated background are crossed, the model may miss  targets or may provide an imprecise bounding box. However, the model is based only on image processing methods for the task of crowd detection. In addition, no intelligence is behind the established process. 
 
 
