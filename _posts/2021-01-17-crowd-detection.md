@@ -22,7 +22,7 @@ In this post, I will present my works on crowd detection. Crowd detection is the
 According to Google Scholar, 1460 papers have been up to now published concerning crowd detection. There are a myriad of areas where crowd detection intervenes. The figure below shows some of them.
 
 <p align="center">
-  <img width="1254" height="40"  src="/assets/images/crowd_detection/crowd_detection_app.png">
+  <img width="254" height="40"  src="/assets/images/crowd_detection/crowd_detection_app.png">
   <br>
   Figure 2:  Application of crowd detection in different areas.
 </p>
