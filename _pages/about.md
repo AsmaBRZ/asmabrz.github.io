@@ -17,6 +17,6 @@ gallery_cities:
 
 Hello guys!
 
-I have just graduated from Pierre and Marie Curie University where I studied Artifcial Intelligence, Robotics & Vision. As I am particularly attracted to Vision applications, I decided to devote a year to specialize in Vision by doing a second master's at Paris-Descartes University. 
+I have just graduated from Pierre and Marie Curie University where I studied Artifcial Intelligence, Robotics & Vision. As I am particularly attracted to vision applications, I decided to devote a year to specialize in vision by doing a second master's degree at Paris-Descartes University. 
 
 This website is a containter for personal and university projects in Artificial Intelligence, Robotics and Vision. 
