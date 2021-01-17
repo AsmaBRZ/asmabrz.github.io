@@ -8,16 +8,16 @@ feature_row:
   - image_path: /assets/images/teasers/image_classif.png
     alt: "2016 election map and cartogram"
     title: "Image classification"
-    excerpt: "Classify images containing dog, cat, truck..."
+    excerpt: "Classification of images containing dog, cat, truck..."
     url: "https://image-classif.herokuapp.com/"
     btn_label: "Open"
     btn_class: "btn--primary"
   - image_path: /assets/images/teasers/cells-seg.png
     alt: "2016 election map and cartogram"
-    title: "Cartograms of US elections"
-    excerpt: "Visualize county-level US election results, make *cartograms* based on county population."
+    title: "Cells segmentation"
+    excerpt: "Segmentation of biomedical images using UNet++"
     url: "cartograms/"
-    btn_label: "Read More"
+    btn_label: "Open"
     btn_class: "btn--primary"
   - image_path: assets/images/teasers/LHCra.png
     alt: "Rectangular aggregations at the LHC"
