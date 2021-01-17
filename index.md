@@ -1,9 +1,8 @@
 ---
 layout: splash
 header:
-  overlay_image: /assets/images/simon-matzinger-320332-unsplash.jpg
+  overlay_image: /assets/images/robot.jpg
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
-  caption: "Photo credit: [Simon Matzinger on **Unsplash**](https://unsplash.com/photos/twukN12EN7c)"
 
 feature_row:
   - image_path: /assets/images/teasers/chronomaps.png
