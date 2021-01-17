@@ -1,8 +1,8 @@
 ---
 type: posts
-title:  "Metrics for semantic segmentation"
+title:  "Crowd detection using fractal dimension and local density"
 classes: wide
-tags: [machine learning, metrics, semantic segmentation, python]
+tags: [image processing, crowd detection, fractal dimension, local density]
 toc: false
 ---
 
