@@ -29,9 +29,30 @@ According to Google Scholar, 1460 papers have been up to now published concernin
   Figure 2:  Application of crowd detection in different areas.
 </p>
 
+## Model architecture
+### Crowd classification
+### Crowd localization
+### System Pipeline
+
+## Model implementation
+### Requirements
+
+## Model training
+### Datasets
+### Data pre-processing
+### Training Setup
+
+
+## Evaluation
+## Running the Application
+To test the model, you click on this link to load the Violence Detection Web App.
+
+## Further Steps
 
 ## Conclusion
 The proposed model is still far from saturating the benchmark metrics. If complicated background are crossed, the model may miss  targets or may provide an imprecise bounding box. However, the model is based only on image processing methods for the task of crowd detection. In addition, no intelligence is behind the established process. 
 
 
 You can access the complete code via [GitHub repository](https://github.com/AsmaBRZ/Crowd-detection).
+
+## References
