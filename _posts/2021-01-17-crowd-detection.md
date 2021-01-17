@@ -14,7 +14,8 @@ In this post, I will present my works on crowd detection mostly using image proc
 
 <p align="center">
   <img width="460" height="300" src="/assets/images/crowd_detection/crowd_detection_app.png">
-  Application of crowd detection in different areas
+  <br>
+  Figure 1:  Application of crowd detection in different areas.
 </p>
 
 
