@@ -9,10 +9,10 @@ feature_row:
     alt: "2016 election map and cartogram"
     title: "Image classification"
     excerpt: "Classify images containing dog, cat, truck..."
-    uri: "https://image-classif.herokuapp.com/"
+    url: "https://image-classif.herokuapp.com/"
     btn_label: "Open"
     btn_class: "btn--primary"
-  - image_path: /assets/images/teasers/election_county_map_carto.png
+  - image_path: /assets/images/teasers/cells-seg.png
     alt: "2016 election map and cartogram"
     title: "Cartograms of US elections"
     excerpt: "Visualize county-level US election results, make *cartograms* based on county population."
