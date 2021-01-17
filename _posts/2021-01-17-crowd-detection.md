@@ -10,9 +10,11 @@ toc: false
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-In this post, I will discuss [semantic segmentation](https://www.mathworks.com/help/vision/ug/semantic-segmentation-basics.html), and in particular evaluation metrics useful to assess the quality of a model. Semantic segmentation is simply the act of recognizing what is in an image, that is, of differentiating (*segmenting*) regions based on their different meaning (*semantic* properties).
-
-> This post is a prelude to a semantic segmentation tutorial, where I will implement different models in Keras. While working on that, I noticed the absence of good materials online so I decided to make a separate post specifically about metrics. For a quick introduction that covers most bases, see [this post](https://www.jeremyjordan.me/semantic-segmentation/) and [this other one](https://www.jeremyjordan.me/evaluating-image-segmentation-models/) by Jeremy Jordan.
+In this post, I will present my works on crowd detection mostly using image processing. According to Google Scholar, 1460 papers have been published concerning crowd detection. There are myriad of areas where crowd detection intervene. The figure below show some of them.
+<p align="center">
+  <img width="460" height="300" src="/assets/images/crowd_detection/crowd_detection_app.png">
+  Application of crowd detection in different areas
+</p>
 
 
 Imagine you are a self-driving car going on your merry way along a road: within all the sensors that help the computer build a representation of the outside world, an essential part will be cameras. For each frame, the car will need to evaluate where the road is, any street sign or light, and finally if there are any obstacles on its way (people, bicycles, walls, other cars). This is where [semantic segmentation](https://en.wikipedia.org/wiki/Image_segmentation) comes in: the goal is to classify every pixel in the image as representing a certain class (e.g., person, car, street, sidewalk, speed limit, etc...).
