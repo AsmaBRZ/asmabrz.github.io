@@ -16,15 +16,15 @@ feature_row:
     alt: "2016 election map and cartogram"
     title: "Cells segmentation"
     excerpt: "Segmentation of biomedical images using UNet++"
-    url: "cartograms/"
+    url: "https://image-classif.herokuapp.com/"
     btn_label: "Open"
     btn_class: "btn--primary"
-  - image_path: assets/images/teasers/LHCra.png
+  - image_path: assets/images/teasers/mask-detection.png
     alt: "Rectangular aggregations at the LHC"
-    title: "Rectangular aggregations at the LHC"
-    excerpt: "Data mining algorithm for statistically significant excesses in high-dimensional LHC datasets."
-    url: "LHC_rectangular_aggregation"
-    btn_label: "Read More"
+    title: "Mask detection COVID-19"
+    excerpt: "Detection of persons correclty wearing, not wearing and wrongly wearing masks."
+    url: "https://image-classif.herokuapp.com/"
+    btn_label: "Open"
     btn_class: "btn--primary"
 
 ---
