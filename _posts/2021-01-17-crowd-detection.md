@@ -10,7 +10,7 @@ toc: false
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-In this post, I will present my works on crowd detection. Crowd detection is the task of classifying and localizing crowd in images. In this work, I am particularly interested in the detection of pedestrians crowd. I mostly used image processing methods to isolate the crowd from non-interesting objetcs and background. Specifically, the classification task is based on fractal dimension and the localization task is based on local density.
+In this post, I will present my works on crowd detection. Crowd detection is the task of classifying and localizing crowd in images (see Fig. 1). In this work, I am particularly interested in the detection of pedestrians crowd. I mostly used image processing methods to isolate the crowd from non-interesting objetcs and background. Specifically, the classification task is based on fractal dimension and the localization task is based on local density.
 
 <p align="center">
   <img width="900" height="600"  src="/assets/images/crowd_detection/crowd_detection_ex_pred.png">
