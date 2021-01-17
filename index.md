@@ -7,8 +7,8 @@ header:
 feature_row:
   - image_path: /assets/images/teasers/image_classif.png
     alt: "2016 election map and cartogram"
-    title: "Cartograms of US elections"
-    excerpt: "Visualize county-level US election results, make *cartograms* based on county population."
+    title: "Image classification"
+    excerpt: "Classify images containing dog, cat, truck..."
     url: "cartograms/"
     btn_label: "Read More"
     btn_class: "btn--primary"
