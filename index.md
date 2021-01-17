@@ -5,7 +5,7 @@ header:
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
 
 feature_row:
-  - image_path: /assets/images/teasers/image_classif.png
+  - image_path: /assets/images/teasers/classif.png
     alt: "2016 election map and cartogram"
     title: "Image classification"
     excerpt: "Classification of images containing dog, cat, truck...etc."
