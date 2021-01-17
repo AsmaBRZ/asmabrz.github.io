@@ -12,18 +12,18 @@ feature_row:
     url: "image_classif/"
     btn_label: "Read More"
     btn_class: "btn--primary"
- - image_path: /assets/images/teasers/image_classif.png
-    alt: "image_classif"
-    title: "Image classification"
-    excerpt: "Classify personal images like dog, cat, truck..."
-    url: "image_classif/"
+  - image_path: /assets/images/teasers/election_county_map_carto.png
+    alt: "2016 election map and cartogram"
+    title: "Cartograms of US elections"
+    excerpt: "Visualize county-level US election results, make *cartograms* based on county population."
+    url: "cartograms/"
     btn_label: "Read More"
     btn_class: "btn--primary"
-  - image_path: /assets/images/teasers/image_classif.png
-    alt: "image_classif"
-    title: "Image classification"
-    excerpt: "Classify personal images like dog, cat, truck..."
-    url: "image_classif/"
+  - image_path: assets/images/teasers/LHCra.png
+    alt: "Rectangular aggregations at the LHC"
+    title: "Rectangular aggregations at the LHC"
+    excerpt: "Data mining algorithm for statistically significant excesses in high-dimensional LHC datasets."
+    url: "LHC_rectangular_aggregation"
     btn_label: "Read More"
     btn_class: "btn--primary"
 
