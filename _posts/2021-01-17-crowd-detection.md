@@ -13,7 +13,7 @@ toc: false
 In this post, I will present my works on crowd detection. Crowd detection is the task of classifying and localizing crowd in images (see Fig. 1). In this work, I am particularly interested in the detection of pedestrians crowd. I mostly used image processing methods to isolate the crowd from non-interesting objetcs and background. Specifically, the classification task is based on fractal dimension and the localization task is based on local density.
 
 <p align="center">
-  <img width="300" height="100"  src="/assets/images/crowd_detection/crowd_detection_ex_pred.png">
+  <img width="450" height="250"  src="/assets/images/crowd_detection/crowd_detection_ex_pred.png">
   <br>
   Figure 1:  Example of crowd detection using my model.
 </p>
@@ -22,7 +22,7 @@ In this post, I will present my works on crowd detection. Crowd detection is the
 According to Google Scholar, 1460 papers have been up to now published concerning crowd detection. There are a myriad of areas where crowd detection intervenes. The figure below shows some of them.
 
 <p align="center">
-  <img width="1454" height="440"  src="/assets/images/crowd_detection/crowd_detection_app.png">
+  <img width="1354" height="140"  src="/assets/images/crowd_detection/crowd_detection_app.png">
   <br>
   Figure 2:  Application of crowd detection in different areas.
 </p>
