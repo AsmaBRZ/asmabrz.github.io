@@ -16,12 +16,12 @@ minimal_mistakes_skin : "default" # "air", "aqua", "contrast", "dark", "dirt", "
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-name: &name "Angelo Monteux" # &name is a YAML anchor which can be *referenced later
-title: Excursions in data
+name: &name "Asma BRAZI" # &name is a YAML anchor which can be *referenced later
+title: 
 email: ""
 description: &description ""
 url: "" # the base hostname & protocol for your site, e.g. http://example.com - http://127.0.0.1:4000/ 
-github_username:  ilmonteux
+github_username:  asmabrz
 #repository: github.com/ilmonteux
 
 
@@ -29,19 +29,19 @@ github_username:  ilmonteux
 author:
   name             : *name # *name is a YAML reference pointing to the &anchor earlier
   avatar           : # link to small image
-  bio              : "Deep Learning Engineer"
-  location         : "San Francisco, CA"
-  email            : "amonteux.AI@gmail.com"
-  uri              : "https://ilmonteux.github.io"
-  home             : "ilmonteux.github.io"
+  bio              : "AI, Robotics & Vision Engineer"
+  location         : "Paris, France"
+  email            : "asmabrazi27@gmail.com"
+  uri              : "https://asmabrz.github.io"
+  home             : "asmabrz.github.io"
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
   facebook         :
   foursquare       :
-  github           : "ilmonteux"
-  linkedin         : "amonteux"
+  github           : "asmabrz"
+  linkedin         : "asma-brazi"
 
 
 
