@@ -24,6 +24,10 @@ According to Google Scholar, 1460 papers have been published concerning crowd de
 
 
 
+Moreover, crowd detection is useful for public event management. The supervisory authorities will receive a notification as soon as a violent public demonstration occures. This will greatly assist them to restore calm and order.
+
+
+
 <p align="center">
   <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_app.png">
   <br>
