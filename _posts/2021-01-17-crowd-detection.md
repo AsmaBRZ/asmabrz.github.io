@@ -19,7 +19,8 @@ In this post, I will present my works on crowd detection. Crowd detection is the
 </p>
 
 
-According to Google Scholar, 1460 papers have been up to now published concerning crowd detection. There are a myriad of areas where crowd detection intervenes. The figure below shows some of theses areas.
+According to Google Scholar, 1460 papers have been published concerning crowd detection ot this day. There are a myriad of areas where crowd detection intervenes. The figure Fig. 2 shows some of these areas.
+
 
 
 
@@ -50,9 +51,10 @@ To test the model, you click on this link to load the Violence Detection Web App
 ## Further Steps
 
 ## Conclusion
-The proposed model is still far from saturating the benchmark metrics. If complicated background are crossed, the model may miss  targets or may provide an imprecise bounding box. However, the model is based only on image processing methods for the task of crowd detection. In addition, no intelligence is behind the established process. 
+The proposed model is still far from saturating the benchmark metrics. If complicated backgrounds are crossed, the model may miss  targets or may provide an imprecise bounding box. However, the model is only based on image processing methods for the task of crowd detection. In addition, no intelligence is behind the established process. 
 
 
-You can access the complete code via [GitHub repository](https://github.com/AsmaBRZ/Crowd-detection).
+You can access the complete code via the [GitHub repository](https://github.com/AsmaBRZ/Crowd-detection).
 
 ## References
+[1] Nilam Sjarif, Siti Mariyam Shamsuddin, Siti Mohd Hashim, and Siti Yuhaniz. Crowd analysisand its applications. volume 179, pages 687–697, 01 2011.
