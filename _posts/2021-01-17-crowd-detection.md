@@ -39,7 +39,9 @@ Another significant case where crowd detection can be relevant comes to track su
 
 
 ## Model architecture
+In this section, I will explain, step by step, how to build a crowd detection model which is based on fractal dimension and local density. 
 ### Crowd classification
+
 ### Crowd localization
 ### System Pipeline
 
