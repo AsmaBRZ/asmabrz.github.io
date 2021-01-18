@@ -23,15 +23,13 @@ According to Google Scholar, 1460 papers have been published concerning crowd de
 
 Thanks to the amazing progress of technology in the medical field, cancer patients can  more and more be saved. Detecting a certain number of cancerous cells, thus forming a crowd, may help for an early-stage diagnosis.
 
-The health sector continues to improve thanks to new technologies. 
-
 Disaster management generally concerns overcrowding scenarios such as music events. If any panic breaks out among a crowd of thousands of persons, their lives are definitely in danger. Detect overcrowded areas as earlier as possible may avoid the worst scenario.
 
-Crowd detection enables  safety and monitoring procedures to be automated. It can be hepful to detect anomalies  and thereby predict risks. 
+In addition, crowd detection enables  safety and monitoring procedures to be automated. It can be very helpful to detect anomalies  and thereby predict risks. 
 
 Moreover, crowd detection is valuable for public event management. The supervisory authorities will receive a notification as soon as a public demonstration occures. Therfore, this will greatly assist them to restore calm and order.
 
-Another significant case where crowd detection can be relevant it comes to track suspicious activity. For instance, people who are fighting necessarily attract other people and this may exacerbate the situation. So, with crowd detection the security officials receive information regarding suspicious activity in the area, and thus can intervene.
+Another significant case where crowd detection can be relevant comes to track suspicious activity. For instance, people who are fighting necessarily attract other people and this may exacerbate the situation. So, with crowd detection the security officials receive information regarding suspicious activity in the area, and thus can rapidly intervene.
 
 <p align="center">
   <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_app.png">
