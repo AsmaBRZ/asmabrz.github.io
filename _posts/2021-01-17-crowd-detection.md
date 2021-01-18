@@ -19,14 +19,16 @@ In this post, I will present my works on crowd detection. Crowd detection is the
 </p>
 
 
-According to Google Scholar, 1460 papers have been published concerning crowd detection ot this day. There are a myriad of areas where crowd detection intervenes. The figure Fig. 2 shows some of these areas.
+According to Google Scholar, 1460 papers have been published concerning crowd detection ot this day. There are a myriad of areas where crowd detection is useful [1]. The figure Fig. 2 shows some of these areas.
+
+Disaster management generally concerns overcrowding scenarios such as music events. If any panic breaks out among a crowd of thousands of persons, their lives are definitely in danger. Detect overcrowded areas Early detection of overcrowding
 
 
+Crowd detection enables  safety and monitoring procedures to be automated. It can be hepful to detect anomalies  and thereby predict risks. 
 
+Moreover, crowd detection is valuable for public event management. The supervisory authorities will receive a notification as soon as a public demonstration occures. Therfore, this will greatly assist them to restore calm and order.
 
-Moreover, crowd detection is useful for public event management. The supervisory authorities will receive a notification as soon as a violent public demonstration occures. This will greatly assist them to restore calm and order.
-
-
+Another significant case where crowd detection can be relevant it comes to track suspicious activity. For instance, people who are fighting necessarily attract other people and this may exacerbate the situation. So, with crowd detection the security officials receive information regarding suspicious activity in the area, and thus can intervene.
 
 <p align="center">
   <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_app.png">
