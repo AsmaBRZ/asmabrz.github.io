@@ -40,7 +40,7 @@ Another significant case where crowd detection can be relevant comes to track su
 
 
 ## Model architecture
-In this section, I will explain, step by step, how to build a crowd detection pipeline based entirely on image processing methods. The pipeline consists of 2 components. The first component concerns crowd classification and the second one concerns crowd localization. The figure Fig. 3 illustrates the general crowd detection pipeline.
+In this section, I will explain, step by step, how to build a crowd detection pipeline entirely based on image processing methods. The pipeline consists of 2 components. The first component concerns crowd classification and the second one concerns crowd localization. The figure Fig. 3 illustrates the general crowd detection pipeline.
 
 <p align="center">
   <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_general_pipeline.png">
