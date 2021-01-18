@@ -18,6 +18,7 @@ In this post, I will present my works on crowd detection. Crowd detection is the
   Figure 1:  Example of crowd detection using my model.
 </p>
 
+## Applications of crowd detection
 According to Google Scholar, 1460 papers have been published concerning crowd detection at this day. There are a myriad of areas where crowd detection is useful [1]. The figure Fig. 2 shows some of these areas.
 
 
@@ -34,14 +35,23 @@ Another significant case where crowd detection can be relevant comes to track su
 <p align="center">
   <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_app.png">
   <br>
-  Figure 2:  Application of crowd detection in different areas.
+  Figure 2:  Applications of crowd detection in different areas.
 </p>
 
 
 ## Model architecture
-In this section, I will explain, step by step, how to build a crowd detection model which is based on fractal dimension and local density. 
-### Crowd classification
+In this section, I will explain, step by step, how to build a crowd detection pipeline based entirely on image processing methods. The pipeline consists of 2 components. The first component concerns crowd classification and the second one concerns crowd localization. The figure Fig. 3 illustrates the general crowd detection pipeline.
 
+<p align="center">
+  <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_general_pipeline.png">
+  <br>
+  Figure 3: General crowd detection pipeline.
+</p>
+
+
+ The components share some pre-pocessesing methods. which is based on fractal dimension and local density. 
+### Crowd classification 
+In order to perform crowd classification, I have built my classification on fractal dimension.
 ### Crowd localization
 ### System Pipeline
 
