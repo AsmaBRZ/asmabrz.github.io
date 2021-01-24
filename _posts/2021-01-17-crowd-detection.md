@@ -47,11 +47,13 @@ In this project, the crowd classification problem is resolved using fractal dime
 
 A. Backes  et al. explains the concept of fractal dimension as: "A measure of how fast the length of a curve increases as the size of the measuring stick is shortened" [1]. And Robert L. Devaney defines the fractal dimension as: "A measure of how complicated a self-similar figure is" [2]. 
 
-There are several ways to compute the fractal dimension . I have chosen the box bounting method, aka Minkowski-Bouligand Dimension. The fractal dimension (FD) is given by:
+There are several ways to compute the fractal dimension. I have chosen the box bounting method, aka Minkowski-Bouligand Dimension. The fractal dimension (FD) is given by:
 
 $$ FD = \lim_{r\to 0} \frac{log(N(r))}{log(\frac{1}{r})} $$
 
-Where $$N$$ is the number of required boxes to cover the map and $$r$$ is the boxes side.
+Where $$N$$ is the number of required boxes to cover the fractal and $$r$$ is the boxes side. The choice of the boxes side parameter is crucial. In fact, when $$r$$ is too small, the fracal dimension becomes very accurate. However, if $$r$$ becomes too big, the fractal is not correctly covered by boxes and this yields to imprecise results. 
+
+
 
 In practise, fractal dimension is widely employed to measure and estimate costline mapping. The most famous example is the coast measurement of Great Britain. As shown in the figure Fig. 3, 
 
