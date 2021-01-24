@@ -70,7 +70,7 @@ $$
 y = \left\{
     \begin{array}{ll}
         crowd & \mbox{if } FD >= t_{FD} \\
-        no crowd & \mbox{otherwise}
+        no \: crowd & \mbox{otherwise}
     \end{array}
 \right.
 $$
