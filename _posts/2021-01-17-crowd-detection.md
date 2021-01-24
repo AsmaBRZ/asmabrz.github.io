@@ -18,7 +18,7 @@ In this post, I will present my university project on crowd detection. Crowd det
   Figure 1:  Example of crowd detection using my model.
 </p>
 
-## Applications of crowd detection
+# Applications of crowd detection
 According to Google Scholar, 1460 papers have been published concerning crowd detection at this day. There are a myriad of areas where crowd detection is useful [3]. The figure Fig. 2 shows some of these areas.
 
 
@@ -43,8 +43,9 @@ Another significant case where crowd detection can be relevant comes to track su
 In this section, I will explain, step by step, how to build a crowd detection pipeline entirely based on image processing methods. The pipeline consists of 2 components. The first component concerns crowd classification and the second one concerns crowd localization. I will develop in the following sub-sections each component in detail.
 
 ### Crowd classification
-In this project, the crowd classification problem is resolved using fractal dimension. But, what is fractal dimension ?  
+In this project, the crowd classification problem is resolved using fractal dimension. But before proceeding with classification  problem, I would like to present the fractal dimension contecpt. 
 
+#### Fractal dimension
 A. Backes  et al. explains the concept of fractal dimension as: "A measure of how fast the length of a curve increases as the size of the measuring stick is shortened" [1]. And Robert L. Devaney defines the fractal dimension as: "A measure of how complicated a self-similar figure is" [2]. 
 
 There are several ways to compute the fractal dimension. I have chosen the box bounting method, aka Minkowski-Bouligand Dimension. The fractal dimension (FD) is given by:
@@ -52,6 +53,8 @@ There are several ways to compute the fractal dimension. I have chosen the box b
 $$ FD = \lim_{r\to 0} \frac{log(N(r))}{log(\frac{1}{r})} $$
 
 Where $$N$$ is the number of required boxes to cover the fractal and $$r$$ is the boxes side. The choice of the boxes side parameter is crucial. In fact, when $$r$$ is too small, the fracal dimension becomes very accurate. However, if $$r$$ becomes too big, the fractal may not be correctly covered by the boxes and this surely yields to imprecise results. 
+
+
 
 
 
