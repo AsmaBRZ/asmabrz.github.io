@@ -38,8 +38,6 @@ Another significant case where crowd detection can be relevant comes to track su
   Figure 2:  Applications of crowd detection in different areas.
 </p>
 
-## Brief review of the state of the art
-The majority of existing approaches favour the use of deep learning for crowd detection. 
 
 ## Model architecture
 In this section, I will explain, step by step, how to build a crowd detection pipeline entirely based on image processing methods. The pipeline consists of 2 components. The first component concerns crowd classification and the second one concerns crowd localization. I will develop in the following sub-sections each component in detail.
@@ -49,9 +47,9 @@ In this project, the crowd classification problem is resolved using fractal dime
 
 A. Backes  et al. explains the concept of fractal dimension as: "A measure of how fast the length of a curve increases as the size of the measuring stick is shortened" [1]. And Robert L. Devaney defines the fractal dimension as: "A measure of how complicated a self-similar figure is" [2]. 
 
-The fractal dimension (FD) is given by:
+There are several ways to compute the fractal dimension . I have chosen the box bounting method, aka Minkowski-Bouligand Dimension. The fractak dimension (FD) is given by:
 
-$$ FD = \frac{log(N)}{log(\frac{1}{r})} $$
+$$ FD = \lim_{r\to\0} \frac{log(N(r))}{log(\frac{1}{r})} $$
 
 Where $$N$$ is the number of congruent segments and $$r$$ is the segments length.
 
