@@ -18,7 +18,7 @@ In this post, I will present my university project on crowd detection. Crowd det
   Figure 1:  Example of crowd detection using my model.
 </p>
 
-# Applications of crowd detection
+## 1. Applications of crowd detection
 According to Google Scholar, 1460 papers have been published concerning crowd detection at this day. There are a myriad of areas where crowd detection is useful [3]. The figure Fig. 2 shows some of these areas.
 
 
@@ -39,26 +39,28 @@ Another significant case where crowd detection can be relevant comes to track su
 </p>
 
 
-## Model architecture
+## 2. Model architecture
 In this section, I will explain, step by step, how to build a crowd detection pipeline entirely based on image processing methods. The pipeline consists of 2 components. The first component concerns crowd classification and the second one concerns crowd localization. I will develop in the following sub-sections each component in detail.
 
-### Crowd classification
+### 2.1 Crowd classification
 In this project, the crowd classification problem is resolved using fractal dimension. But before proceeding with classification  problem, I would like to present the fractal dimension contecpt. 
 
-#### Fractal dimension
+#### 2.1.1 Fractal dimension
 A. Backes  et al. explains the concept of fractal dimension as: "A measure of how fast the length of a curve increases as the size of the measuring stick is shortened" [1]. And Robert L. Devaney defines the fractal dimension as: "A measure of how complicated a self-similar figure is" [2]. 
 
 There are several ways to compute the fractal dimension. I have chosen the box bounting method, aka Minkowski-Bouligand Dimension. The fractal dimension (FD) is given by:
 
-$$ FD = \lim_{r\to 0} \frac{log(N(r))}{log(\frac{1}{r})} $$
+$$ FD = \lim_{r\to 0} \frac{log(N(r))}{log(\frac{1}{r})} $$ (1)
 
 Where $$N$$ is the number of required boxes to cover the fractal and $$r$$ is the boxes side. The choice of the boxes side parameter is crucial. In fact, when $$r$$ is too small, the fracal dimension becomes very accurate. However, if $$r$$ becomes too big, the fractal may not be correctly covered by the boxes and this surely yields to imprecise results. 
 
 
+In practise, fractal dimension is widely employed to measure and estimate costline mapping. If the goal is to compare which among Australia and Great Britain has the biggest coastline, it would be enough to compute the FD of each map and the one having the biggest FD will be considered as the map with the biggest coastline.
+
+#### 2.1.1 Fractal dimension-based model for classification
 
 
-
-In practise, fractal dimension is widely employed to measure and estimate costline mapping. The most famous example is the coast measurement of Great Britain. As shown in the figure Fig. 3, 
+ As shown in the figure Fig. 3, 
 
 
 The figure Fig. 3 illustrates the general crowd detection pipeline.
