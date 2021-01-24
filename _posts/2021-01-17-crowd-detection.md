@@ -49,7 +49,7 @@ A. Backes  et al. explains the concept of fractal dimension as: "A measure of ho
 
 There are several ways to compute the fractal dimension . I have chosen the box bounting method, aka Minkowski-Bouligand Dimension. The fractak dimension (FD) is given by:
 
-$$ FD = \lim_{r\to\0} \frac{log(N(r))}{log(\frac{1}{r})} $$
+$$ FD = \lim_{r\to 0} \frac{log(N(r))}{log(\frac{1}{r})} $$
 
 Where $$N$$ is the number of required boxes to cover the map and $$r$$ is the boxes side.
 
