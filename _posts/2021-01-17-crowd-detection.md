@@ -64,6 +64,14 @@ Crowd classification consists of analyzing an image and saying whether it contai
 
 Imagine a scene with only 4 persons. Relying on box counting method, the 4 persons should be coverd by a sufficient number of boxes in order to get a precise fractal dimension. If more than 4 persons are present in the scene, the computed fractal dimension naturally increases. Assuming this, the crowd classification problem is represented by a thresold on the computed fractal dimension. Let $$t_FD$$ be the threshold on the crowd fractal dimension, the classification is built as follows : 
 
+$$
+\sigma(s,i) = \left\{
+    \begin{array}{ll}
+        \tau_{si} & \mbox{si } \{s,i\} \in E \\
+        \infty & \mbox{sinon.}
+    \end{array}
+\right.
+$$
 
 
  As shown in the figure Fig. 3, 
