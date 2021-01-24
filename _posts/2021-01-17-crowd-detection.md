@@ -49,8 +49,9 @@ In this project, the crowd classification problem is resolved using fractal dime
 
 > The fractal dimension is a measure of how fast the length of a curve increases as the size of the measuring stick is shortened [1]. 
 
-Robert L. Devaney defines the fractal dimension as: "The measure of how complicated a self-similar figure is". The fractal dimension is given by:
-$$ fractal dimension = \frac{log(N)}{log(\frac{1}{|r})} $$
+Robert L. Devaney defines the fractal dimension as: "The measure of how complicated a self-similar figure is". The fractal dimension (FD) is given by:
+
+$$ FD = \frac{log(N)}{log(\frac{1}{|r})} $$
 
 
 In practise, fractal dimension is widely employed to measure and estimate costline mapping. The most famous example is the coast measurement of Great Britain. As shown in the figure Fig. 3, 
