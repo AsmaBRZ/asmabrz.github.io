@@ -10,7 +10,7 @@ toc: false
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-In this post, I will present my works on crowd detection. Crowd detection is the task of classifying and localizing crowd in images (see Fig. 1). In this work, I am particularly interested in pedestrians crowd detection. I mostly used image processing methods to isolate the crowd from non-interesting objetcs and background. Specifically, the classification task is based on fractal dimension and the localization task is based on local density.
+In this post, I will present my university project on crowd detection. Crowd detection is the task of classifying and localizing crowd in images (see Fig. 1). In this project, I am particularly interested in pedestrians crowd detection. I mostly used image processing methods to isolate the crowd from non-interesting objetcs and background. Specifically, the classification task is based on fractal dimension and the localization task is based on local density.
 
 <p align="center">
   <img width="450" height="250"  src="/assets/images/crowd_detection/crowd_detection_ex_pred.png">
@@ -38,14 +38,44 @@ Another significant case where crowd detection can be relevant comes to track su
   Figure 2:  Applications of crowd detection in different areas.
 </p>
 
+## Brief review of the state of the art
+The majority of existing approaches favour the use of deep learning for crowd detection. 
 
 ## Model architecture
-In this section, I will explain, step by step, how to build a crowd detection pipeline entirely based on image processing methods. The pipeline consists of 2 components. The first component concerns crowd classification and the second one concerns crowd localization. The figure Fig. 3 illustrates the general crowd detection pipeline.
+In this section, I will explain, step by step, how to build a crowd detection pipeline entirely based on image processing methods. The pipeline consists of 2 components. The first component concerns crowd classification and the second one concerns crowd localization. I will develop in the following sub-sections each component in detail.
+
+### Crowd classification
+In this project, the crowd classification problem is resolved using fractal dimension. But, what is fractal dimension ?
+
+{% quote derrida:purveyor %}
+Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+sed do eiusmod tempor.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing.
+{% endquote %}
+
+<blockquote>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br/>
+  sed do eiusmod tempor.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+  <cite>
+    <a href="#derrida:purveyor">(Derrida, 1975)</a>
+  </cite>
+</blockquote>
+
+The figure Fig. 3 illustrates the general crowd detection pipeline.
 
 <p align="center">
-  <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_general_pipeline.png">
+  <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_pipeline_classif.png">
   <br>
-  Figure 3: General crowd detection pipeline.
+  Figure 3: Crowd classification pipeline.
+</p>
+
+
+<p align="center">
+  <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_pipeline_locali.png">
+  <br>
+  Figure 4: Crowd localization pipeline.
 </p>
 
 
