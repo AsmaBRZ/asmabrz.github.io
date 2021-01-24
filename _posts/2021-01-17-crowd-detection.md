@@ -53,6 +53,7 @@ The fractal dimension (FD) is given by:
 
 $$ FD = \frac{log(N)}{log(\frac{1}{r})} $$
 
+Where $$N$$ is the number of congruent segments and $$r$$ is the segments length.
 
 In practise, fractal dimension is widely employed to measure and estimate costline mapping. The most famous example is the coast measurement of Great Britain. As shown in the figure Fig. 3, 
 
