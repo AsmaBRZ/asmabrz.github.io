@@ -54,14 +54,6 @@ sed do eiusmod tempor.
 Lorem ipsum dolor sit amet, consectetur adipisicing.
 {% endquote %}
 
-<blockquote>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br/>
-  sed do eiusmod tempor.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-  <cite>
-    <a href="#derrida:purveyor">(Derrida, 1975)</a>
-  </cite>
-</blockquote>
 
 The figure Fig. 3 illustrates the general crowd detection pipeline.
 
