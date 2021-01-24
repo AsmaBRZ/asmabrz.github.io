@@ -50,7 +50,9 @@ A. Backes  et al. explains the concept of fractal dimension as: "A measure of ho
 
 There are several ways to compute the fractal dimension. I have chosen the box bounting method, aka Minkowski-Bouligand Dimension. The fractal dimension (FD) is given by:
 
+<p align="center">
 $$ FD = \lim_{r\to 0} \frac{log(N(r))}{log(\frac{1}{r})} $$ (1)
+</p>
 
 Where $$N$$ is the number of required boxes to cover the fractal and $$r$$ is the boxes side. The choice of the boxes side parameter is crucial. In fact, when $$r$$ is too small, the fracal dimension becomes very accurate. However, if $$r$$ becomes too big, the fractal may not be correctly covered by the boxes and this surely yields to imprecise results. 
 
