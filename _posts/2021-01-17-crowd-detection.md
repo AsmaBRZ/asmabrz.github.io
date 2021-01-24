@@ -19,7 +19,7 @@ In this post, I will present my university project on crowd detection. Crowd det
 </p>
 
 ## Applications of crowd detection
-According to Google Scholar, 1460 papers have been published concerning crowd detection at this day. There are a myriad of areas where crowd detection is useful [2]. The figure Fig. 2 shows some of these areas.
+According to Google Scholar, 1460 papers have been published concerning crowd detection at this day. There are a myriad of areas where crowd detection is useful [3]. The figure Fig. 2 shows some of these areas.
 
 
 Thanks to the amazing progress of technology in the medical field, cancer patients can  more and more be saved. Detecting a certain number of cancerous cells, thus forming a crowd, may help for an early-stage diagnosis.
@@ -45,13 +45,13 @@ The majority of existing approaches favour the use of deep learning for crowd de
 In this section, I will explain, step by step, how to build a crowd detection pipeline entirely based on image processing methods. The pipeline consists of 2 components. The first component concerns crowd classification and the second one concerns crowd localization. I will develop in the following sub-sections each component in detail.
 
 ### Crowd classification
-In this project, the crowd classification problem is resolved using fractal dimension. But, what is fractal dimension ?
+In this project, the crowd classification problem is resolved using fractal dimension. But, what is fractal dimension ?  
 
-> The fractal dimension is a measure of how fast the length of a curve increases as the size of the measuring stick is shortened [1]. 
+A. Backes  et al. explains the concept of fractal dimension as: "A measure of how fast the length of a curve increases as the size of the measuring stick is shortened" [1]. And Robert L. Devaney defines the fractal dimension as: "A measure of how complicated a self-similar figure is" [2]. 
 
-Robert L. Devaney defines the fractal dimension as: "The measure of how complicated a self-similar figure is". The fractal dimension (FD) is given by:
+The fractal dimension (FD) is given by:
 
-$$ FD = \frac{log(N)}{log(\frac{1}{|r})} $$
+$$ FD = \frac{log(N)}{log(\frac{1}{r})} $$
 
 
 In practise, fractal dimension is widely employed to measure and estimate costline mapping. The most famous example is the coast measurement of Great Britain. As shown in the figure Fig. 3, 
@@ -101,5 +101,8 @@ The proposed model is still far from saturating the benchmark metrics. If compli
 You can access the complete code via the [GitHub repository](https://github.com/AsmaBRZ/Crowd-detection).
 
 ## References
-[1] A. Backes and O. Bruno. Fractal and multi-scale fractal dimension analysis : a comparativestudy of bouligand-minkowski method.ArXiv, abs/1201.3153, 2012.
-[2] Nilam Sjarif, Siti Mariyam Shamsuddin, Siti Mohd Hashim, and Siti Yuhaniz. Crowd analysisand its applications. volume 179, pages 687–697, 01 2011.
+[1] A. Backes and O. Bruno. Fractal and multi-scale fractal dimension analysis : a comparative study of bouligand-minkowski method.ArXiv, abs/1201.3153, 2012.
+
+[2] Robert L. Devaney. Fractal dimension. http ://math.bu.edu/DYSYS/chaos-game/node6.html,1995.
+
+[3] Nilam Sjarif, Siti Mariyam Shamsuddin, Siti Mohd Hashim, and Siti Yuhaniz. Crowd analysis and its applications. volume 179, pages 687–697, 01 2011.
