@@ -51,7 +51,7 @@ There are several ways to compute the fractal dimension . I have chosen the box 
 
 $$ FD = \lim_{r\to\0} \frac{log(N(r))}{log(\frac{1}{r})} $$
 
-Where $$N$$ is the number of congruent segments and $$r$$ is the segments length.
+Where $$N$$ is the number of required boxes to cover the map and $$r$$ is the boxes side.
 
 In practise, fractal dimension is widely employed to measure and estimate costline mapping. The most famous example is the coast measurement of Great Britain. As shown in the figure Fig. 3, 
 
