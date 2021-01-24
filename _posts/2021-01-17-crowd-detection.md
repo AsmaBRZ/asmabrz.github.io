@@ -47,13 +47,6 @@ In this section, I will explain, step by step, how to build a crowd detection pi
 ### Crowd classification
 In this project, the crowd classification problem is resolved using fractal dimension. But, what is fractal dimension ?
 
-{% quote derrida:purveyor %}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-sed do eiusmod tempor.
-
-Lorem ipsum dolor sit amet, consectetur adipisicing.
-{% endquote %}
-
 
 The figure Fig. 3 illustrates the general crowd detection pipeline.
 
