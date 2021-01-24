@@ -64,13 +64,13 @@ Drawing on the previous  coastline estimation example, now let's see how fractal
 
 Crowd classification consists of analyzing an image and saying whether it contains a crowd or not. In this project, a crowd is considered as a grouping of at least 5 persons. If a crowd is correctly extracted from an image with its irregular contours, the fractal dimension of these contours can be computed. 
 
-Imagine a scene with only 4 persons. Relying on box counting method, the 4 persons should be coverd by a sufficient number of boxes in order to get a precise fractal dimension. If more than 4 persons are present in the scene, the computed fractal dimension naturally increases. Assuming this, the crowd classification problem is represented by a thresold on the computed fractal dimension. Let $$t_{FD}$$ be the threshold on the crowd fractal dimension, the classification is built as follows : 
+Imagine a scene with only 4 persons. Relying on box counting method, the 4 persons should be coverd by a sufficient number of boxes in order to get a precise fractal dimension. If more than 4 persons are present in the scene, the computed fractal dimension naturally increases. Assuming this, the crowd classification problem is represented by a thresold filtering on the computed fractal dimension. Let $$t_{FD}$$ be the threshold on the crowd fractal dimension, the classification is built as follows : 
 
 $$
 y = \left\{
     \begin{array}{ll}
-        crowd & \mbox{si } FD >= t_FD \\
-        no crowd & \mbox{sinon.}
+        crowd & \mbox{if } FD >= t_{FD} \\
+        no crowd & \mbox{otherwise}
     \end{array}
 \right.
 $$
