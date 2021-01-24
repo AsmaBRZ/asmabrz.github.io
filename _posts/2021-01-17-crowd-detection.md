@@ -51,7 +51,7 @@ There are several ways to compute the fractal dimension. I have chosen the box b
 
 $$ FD = \lim_{r\to 0} \frac{log(N(r))}{log(\frac{1}{r})} $$
 
-Where $$N$$ is the number of required boxes to cover the fractal and $$r$$ is the boxes side. The choice of the boxes side parameter is crucial. In fact, when $$r$$ is too small, the fracal dimension becomes very accurate. However, if $$r$$ becomes too big, the fractal is not correctly covered by boxes and this yields to imprecise results. 
+Where $$N$$ is the number of required boxes to cover the fractal and $$r$$ is the boxes side. The choice of the boxes side parameter is crucial. In fact, when $$r$$ is too small, the fracal dimension becomes very accurate. However, if $$r$$ becomes too big, the fractal may not be correctly covered by the boxes and this surely yields to imprecise results. 
 
 
 
