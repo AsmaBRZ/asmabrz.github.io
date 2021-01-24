@@ -58,6 +58,12 @@ Where $$N$$ is the number of required boxes to cover the fractal and $$r$$ is th
 In practise, fractal dimension is widely employed to measure and estimate costline mapping. If the goal is to compare which among Australia and Great Britain has the biggest coastline, it would be enough to compute the FD of each map and the one having the biggest FD will be considered as the map with the biggest coastline.
 
 #### 2.1.1 Fractal dimension-based model for classification
+Drawing on the previous  coastline estimation example, now let's see how fractal dimension can help with crowd classification. 
+
+Crowd classification consists of analyzing an image and saying whether it contains a crowd or not. In this project, a crowd is considered as a grouping of at least 5 persons. If a crowd is correctly extracted from an image with its irregular contours, the fractal dimension of these contours can be computed. 
+
+Imagine a scene with only 4 persons. Relying on box counting method, the 4 persons should be coverd by a sufficient number of boxes in order to get a precise fractal dimension. If more than 4 persons are present in the scene, the computed fractal dimension naturally increases. Assuming this, the crowd classification problem is represented by a thresold on the computed fractal dimension. Let $$t_FD$$ be the threshold on the crowd fractal dimension, the classification is built as follows : 
+
 
 
  As shown in the figure Fig. 3, 
