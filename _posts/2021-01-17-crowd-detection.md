@@ -80,7 +80,7 @@ $$
 #### 2.1.1 Crowd classification pipeline
 The crowd classification process can be divided into 4 steps (see figure Fig. 3). 
 
-First of all, the color image $$I$$ is read. Then, $$I$$ goes through a chain of preprocessing functions. $$I$$  is converted to grayscale. After that, the edges are extracted using OpenCV's preprocessing function called $$cv2.dnn.blobFromImage$$. This function performs, among others, Mean Subtraction which serves to normalize the image and helps reducing illumination changes. Then, binarization is performed using $$cv2.adaptiveThreshold$$. The next step is contours detection. It is the most important preprocessing function because it draws the borders on which $$FD$$ is directly computed. The contours are detected using $$cv2.findContours$$. Finally, the classification decision is formulated according to the comparison between FD and t_{FD}. 
+First of all, the color image $$I$$ is read. Then, $$I$$ goes through a chain of preprocessing functions. $$I$$  is converted to grayscale. After that, the edges are extracted using OpenCV's preprocessing function called $$cv2.dnn.blobFromImage$$. This function performs, among others, Mean Subtraction which serves to normalize the image and helps reducing illumination changes. Then, binarization is performed using $$cv2.adaptiveThreshold$$. The next step is contours detection which is the  most important preprocessing function. Because this step draws the borders on which $$FD$$ is directly computed. The contours are detected using $$cv2.findContours$$. Sometimes, the obtained contour map seem to have contours on the borders of the image which is unnecessary. A manual operation is added in order to delete these specific contours. Finally, the classification decision is formulated according to the comparison between FD and t_{FD}. 
 
 <p align="center">
   <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_pipeline_classif.png">
@@ -88,9 +88,17 @@ First of all, the color image $$I$$ is read. Then, $$I$$ goes through a chain of
   Figure 3: Crowd classification pipeline.
 </p>
 
+#### 2.1.2 Crowd localization pipeline
+This part provides an elaborated description of the crowd localization pipeeline. This pipeline consists of a chain of 5  steps (see figure Fig. 4). 
+
+After reading and converting the color image $$I$$ to grayscale, the edges are extracted in the same way as for classification. Contrary to the classification process, $$I$$ is smoothed before being binarized. Smoothing helps to reduce noise and details that are meaningless for the localization problem such as facial features. Next, the contours are detected following the same method as for classification. 
+
+The next step is the local density computation. As $$I$$ has already been binarized, it only contains  white pixels (constituting the contours) and black pixels (constituting the  background). So, the contour map is devided into patches and on each patch the number of white pixels is accounted and saved into a matrix. Let $$M$$ be the resulting matrix which has the same size as the number of patches. $$M$$ represents the local density matrix.
+
+Let $$t_{ld}$$ be a threshold on the local density. $$t_{ld}$$ is used to filter $$M$$ and to keep the most dense patches. The keept patches reflect the pentential regions where a crowd may be located. After that, the keept patches are binarized to form a mask. The mask is used to draw the bounding box around the crowd.
 
 <p align="center">
-  <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_pipeline_locali.png">
+  <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_pipeline_localiz.png">
   <br>
   Figure 4: Crowd localization pipeline.
 </p>
