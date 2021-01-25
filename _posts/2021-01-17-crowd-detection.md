@@ -82,7 +82,7 @@ The crowd classification process can be divided into 4 steps (see figure Fig. 3)
 
 First of all, the color image $$I$$ is read. Then, $$I$$ goes through a chain of preprocessing functions. $$I$$  is converted to grayscale. After that, the edges are extracted using OpenCV's preprocessing function called $$cv2.dnn.blobFromImage$$. This function performs, among others, Mean Subtraction which serves to normalize the image and helps reducing illumination changes. Then, binarization is performed using $$cv2.adaptiveThreshold$$. 
 
-The next step is contours detection which is the  most important preprocessing function. Because this step draws the borders on which $$FD$$ is directly computed. The contours are detected using $$cv2.findContours$$. Sometimes, the obtained contour map seem to have contours on the borders of the image which is unnecessary. A manual operation is added in order to delete these specific contours. Finally, the classification decision is formulated according to the comparison between FD and t_{FD}. 
+The next step is contours detection which is the  most important preprocessing function. Because this step draws the borders on which $$FD$$ is directly computed. The contours are detected using $$cv2.findContours$$. Sometimes, the obtained contour map seem to have contours on the borders of the image which is unnecessary. A manual operation is added in order to delete these specific contours. Finally, the classification decision is formulated according to the comparison between FD and $$t_{FD}$$. 
 
 <p align="center">
   <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_pipeline_classif.png">
@@ -113,7 +113,7 @@ In the two previous parts, I have explained how the classification and the local
   <br>
   Figure 5: Illustration of the complete crowd detection pipeline.
 </p>
-As shown in the figure Fig. 5, the edge detection step is shared between classification and localization. 
+As shown in the figure Fig. 5, the edge detection step is shared between the 2 separate branches of classification and  localization. At the end the result 
 ### Crowd classification 
 In order to perform crowd classification, I have built my classification on fractal dimension.
 ### Crowd localization
