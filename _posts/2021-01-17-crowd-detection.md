@@ -96,17 +96,19 @@ The crowd localization in this project is defined according to the local density
 
 Now, let's dive into an elaborated description of the crowd localization pipeline. This pipeline consists of a chain of 5  steps (see figure Fig. 4). 
 
+<p align="center">
+  <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_pipeline_localiz.png">
+  <br>
+  Figure 4: Crowd localization pipeline.
+</p>
+
 After reading and converting the color image $$I$$ to grayscale, the edges are extracted in the same way as for classification. Contrary to the classification process, $$I$$ is smoothed before being binarized. Smoothing helps to reduce noise and details that are meaningless for the localization problem such as facial features. Next, the contours are detected following the same method as for classification. 
 
 The next step is the local density computation. As $$I$$ has already been binarized, it only contains  white pixels (constituting the contours) and black pixels (constituting the  background). So, the contour map is devided into patches and on each patch the number of white pixels is accounted and saved into a matrix. Let $$M$$ be the resulting matrix which has the same size as the number of patches. $$M$$ represents the local density matrix.
 
 Let $$t_{ld}$$ be a threshold on the local density. $$t_{ld}$$ is used to filter $$M$$ and to keep the most dense patches. The keept patches reflect the pentential regions where a crowd may be located. After that, the keept patches are binarized and resized to the dimension of the original image in order to form the mask. Finally, the mask is used to draw the bounding box around the crowd.
 
-<p align="center">
-  <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_pipeline_localiz.png">
-  <br>
-  Figure 4: Crowd localization pipeline.
-</p>
+
 
 #### 2.3 Visual illustration of crowd detection pipeline
 In the two previous parts, I have explained how the classification and the localization are performed. In this part, I suggest to illustrate with the figure Fig. 5 the complete crowd detection pipeline. 
@@ -124,8 +126,13 @@ As shown in the figure Fig. 5, the edge detection step is shared between the 2 s
 - GPU is not required.
 
 
-
 ## 2.4 Dataset
+CrowdHuman ia s Benchmark for Detecting Human in a Crowd [4]. It has been created by Shuai Shao et al. in 2018.  This benchmark includes some images which are not free. These particular images are protected with a special writing on it. This may distort the contour map and produce misleading results. To solve this problem, I have simply deleted the protected images. 
+
+After cleaning the benchmark, only few images were kept. So, I was obliged to search for another dataset.
+
+The second benchmark I have studied is CityStreet [5][6]. CityStreet has been published in 2019 by Qi Zhang et al. Unlike CrowdHuman, CityStreet contains images of people which are sometimes so far from the camera. As I did not managed multi-scale images, I was brought to work only with images of the same scale.
+
 
 ### Data pre-processing
 ## Model training
@@ -152,3 +159,8 @@ You can access the complete code via the [GitHub repository](https://github.com/
 [3] Shuai Shao, Zijian Zhao, Boxun Li, Tete Xiao, Gang Yu, Xiangyu Zhang, and Jian Sun. Crowd-human : A benchmark for detecting human in a crowd.arXiv preprint arXiv :1805.00123, 2018
 
 [4] Nilam Sjarif, Siti Mariyam Shamsuddin, Siti Mohd Hashim, and Siti Yuhaniz. Crowd analysis and its applications. volume 179, pages 687–697, 01 2011.
+
+[5] Qi Zhang and Antoni B Chan.  Wide-area crowd counting via ground-plane density mapsand multi-view fusion cnns. InProceedings of the IEEE Conference on Computer Vision andPattern Recognition, page 8297–8306, 2019.
+
+[6] Qi Zhang and Antoni B Chan. Wide-area crowd counting : Multi-view fusion networks forcounting in large scenes. Inhttps ://arxiv.org/abs/2012.00946, 2020
+
