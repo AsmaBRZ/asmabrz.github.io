@@ -122,7 +122,7 @@ As shown in the figure Fig. 5, the edge detection step is shared between the 2 s
 
 ## 2.3 Model implementation and software requirements
 - The entire code is written in Python 3.8.5. 
-- OpenCV 4.4.0 is the main used library for image preprocessing. 
+- OpenCV 4.4.0 is the main used library for image processing. 
 - GPU is not required.
 
 
@@ -132,14 +132,12 @@ CrowdHuman ia s Benchmark for Detecting Human in a Crowd [4]. It has been create
 After cleaning the benchmark, only few images were kept. So, I was obliged to search for another dataset.
 
 The second benchmark I have studied is CityStreet [5][6]. CityStreet has been published in 2019 by Qi Zhang et al. Unlike CrowdHuman, CityStreet contains images of people which are sometimes so far from the camera. As I did not managed multi-scale images, I was brought to work only with images of the same scale.
+ 
+
+## 2.5 Model training
 
 
-### Data pre-processing
-## Model training
-### Training Setup
-
-
-## Evaluation
+## 2.6 Evaluation
 ## Running the Application
 To test the model, you click on this link to load the Violence Detection Web App.
 
