@@ -19,7 +19,7 @@ In this post, I will present my university project on crowd detection. Crowd det
 </p>
 
 ## 1. Applications of crowd detection
-According to Google Scholar, 1460 papers have been published concerning crowd detection at this day. There are a myriad of areas where crowd detection is useful [3]. The figure Fig. 2 shows some of these areas.
+According to Google Scholar, 1460 papers have been published concerning crowd detection at this day. There are a myriad of areas where crowd detection is useful [4]. The figure Fig. 2 shows some of these areas.
 
 
 Thanks to the amazing progress of technology in the medical field, cancer patients can  more and more be saved. Detecting a certain number of cancerous cells, thus forming a crowd, may help for an early-stage diagnosis.
@@ -118,12 +118,17 @@ In the two previous parts, I have explained how the classification and the local
 </p>
 As shown in the figure Fig. 5, the edge detection step is shared between the 2 separate branches of classification and  localization. For the classification and localization, only relevant steps are represented such as masking image or contour map.   At the end, the result is given by the class (crowd or no crowd) and the bounding box.
 
-## Model implementation
-### Requirements
+## 2.3 Model implementation and software requirements
+- The entire code is written in Python 3.8.5. 
+- OpenCV 4.4.0 is the main used library for image preprocessing. 
+- GPU is not required.
 
-## Model training
-### Datasets
+
+
+## 2.4 Dataset
+
 ### Data pre-processing
+## Model training
 ### Training Setup
 
 
@@ -144,4 +149,6 @@ You can access the complete code via the [GitHub repository](https://github.com/
 
 [2] Robert L. Devaney. Fractal dimension. http ://math.bu.edu/DYSYS/chaos-game/node6.html,1995.
 
-[3] Nilam Sjarif, Siti Mariyam Shamsuddin, Siti Mohd Hashim, and Siti Yuhaniz. Crowd analysis and its applications. volume 179, pages 687–697, 01 2011.
+[3] Shuai Shao, Zijian Zhao, Boxun Li, Tete Xiao, Gang Yu, Xiangyu Zhang, and Jian Sun. Crowd-human : A benchmark for detecting human in a crowd.arXiv preprint arXiv :1805.00123, 2018
+
+[4] Nilam Sjarif, Siti Mariyam Shamsuddin, Siti Mohd Hashim, and Siti Yuhaniz. Crowd analysis and its applications. volume 179, pages 687–697, 01 2011.
