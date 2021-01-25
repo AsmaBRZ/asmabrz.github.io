@@ -61,7 +61,7 @@ The choice of the boxes side parameter is crucial. In fact, when $$r$$ is too sm
 
 In practise, fractal dimension is widely employed to measure and estimate costline mapping. If the goal is to compare which among Australia and Great Britain has the biggest coastline, it would be enough to compute the FD of each map and the one having the biggest FD will be considered as the map with the biggest coastline.
 
-#### 2.1.1 Fractal dimension-based model for classification
+#### 2.1.2 Fractal dimension-based model for classification
 Drawing on the previous  coastline estimation example, now let's see how fractal dimension can help with crowd classification. 
 
 Crowd classification consists of analyzing an image and saying whether it contains a crowd or not. In this project, a crowd is considered as a grouping of at least 5 persons. If a crowd is correctly extracted from an image with its irregular contours, the fractal dimension of these contours can be computed. 
@@ -77,7 +77,7 @@ y = \left\{
 \right.
 $$
 
-#### 2.1.1 Crowd classification pipeline
+#### 2.1.3 Crowd classification pipeline
 The crowd classification process can be divided into 4 steps (see figure Fig. 3). 
 
 First of all, the color image $$I$$ is read. Then, $$I$$ goes through a chain of preprocessing functions. $$I$$  is converted to grayscale. After that, the edges are extracted using OpenCV's preprocessing function called $$cv2.dnn.blobFromImage$$. This function performs, among others, Mean Subtraction which serves to normalize the image and helps reducing illumination changes. Then, binarization is performed using $$cv2.adaptiveThreshold$$. 
@@ -90,8 +90,11 @@ The next step is contours detection which is the  most important preprocessing f
   Figure 3: Crowd classification pipeline.
 </p>
 
-#### 2.1.2 Crowd localization pipeline
-This part provides an elaborated description of the crowd localization pipeeline. This pipeline consists of a chain of 5  steps (see figure Fig. 4). 
+#### 2.2 Crowd localization
+The crowd localization in this project is defined according to the local density. Naturally, crowded scene contains a high density compared with a scene containing a few people. The local density is computed from the contour map. Then,  it is thresholded and used to create the bounding box. The bounding box is a rectangle which covers the crowd if it exists.
+
+
+Now, let's dive into an elaborated description of the crowd localization pipeline. This pipeline consists of a chain of 5  steps (see figure Fig. 4). 
 
 After reading and converting the color image $$I$$ to grayscale, the edges are extracted in the same way as for classification. Contrary to the classification process, $$I$$ is smoothed before being binarized. Smoothing helps to reduce noise and details that are meaningless for the localization problem such as facial features. Next, the contours are detected following the same method as for classification. 
 
@@ -105,19 +108,15 @@ Let $$t_{ld}$$ be a threshold on the local density. $$t_{ld}$$ is used to filter
   Figure 4: Crowd localization pipeline.
 </p>
 
-#### 2.1.1 Visual illustration of crowd detection pipeline
-In the two previous parts, I have explained how the classification and the localization are performed. Now, I will show with some pictures the result of each step of the crowd detection pipeline. 
+#### 2.1.3 Visual illustration of crowd detection pipeline
+In the two previous parts, I have explained how the classification and the localization are performed. In this part, I suggest to illustrate with the figure Fig. 5 the complete crowd detection pipeline. 
 
 <p align="center">
   <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_pipeline_ill.png">
   <br>
   Figure 5: Illustration of the complete crowd detection pipeline.
 </p>
-As shown in the figure Fig. 5, the edge detection step is shared between the 2 separate branches of classification and  localization. At the end the result 
-### Crowd classification 
-In order to perform crowd classification, I have built my classification on fractal dimension.
-### Crowd localization
-### System Pipeline
+As shown in the figure Fig. 5, the edge detection step is shared between the 2 separate branches of classification and  localization. For the classification and localization, only relevant steps are represented such as masking image or contour map.   At the end, the result is given by the class (crowd or no crowd) and the bounding box.
 
 ## Model implementation
 ### Requirements
