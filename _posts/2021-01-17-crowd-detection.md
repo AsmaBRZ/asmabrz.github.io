@@ -43,7 +43,7 @@ Another significant case where crowd detection can be relevant comes to track su
 In this section, I will explain, step by step, how to build a crowd detection pipeline entirely based on image processing methods. The pipeline consists of 2 components. The first component concerns crowd classification and the second one concerns crowd localization. I will develop in the following sub-sections each component in detail.
 
 ### 2.1 Crowd classification
-In this project, the crowd classification problem is resolved using fractal dimension. But, before proceeding with classification  problem, I would like to present the fractal dimension contecpt. 
+In this project, the crowd classification problem is resolved using fractal dimension. But, before proceeding with classification  problem, I would like to present the fractal dimension concept. 
 
 #### 2.1.1 Fractal dimension
 A. Backes  et al. explains the concept of fractal dimension as: "A measure of how fast the length of a curve increases as the size of the measuring stick is shortened" [1]. And Robert L. Devaney defines the fractal dimension as: "A measure of how complicated a self-similar figure is" [2]. 
