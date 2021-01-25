@@ -51,10 +51,12 @@ A. Backes  et al. explains the concept of fractal dimension as: "A measure of ho
 There are several ways to compute the fractal dimension. I have chosen the box bounting method, aka Minkowski-Bouligand Dimension. The fractal dimension (FD) is given by:
 
 <p align="center">
-$$ FD = \lim_{r\to 0} \frac{log(N(r))}{log(\frac{1}{r})} (1) $$ 
+$$ FD = \lim_{r\to 0} \frac{log(N(r))}{log(\frac{1}{r})}$$ 
 </p>
 
-Where $$N$$ is the number of required boxes to cover the fractal and $$r$$ is the boxes side. The choice of the boxes side parameter is crucial. In fact, when $$r$$ is too small, the fracal dimension becomes very accurate. However, if $$r$$ becomes too big, the fractal may not be correctly covered by the boxes and this surely yields to imprecise results. 
+Where $$N$$ is the number of required boxes to cover the fractal and $$r$$ is the boxes side. 
+
+The choice of the boxes side parameter is crucial. In fact, when $$r$$ is too small, the fractal dimension becomes very accurate. However, if $$r$$ becomes too big, the fractal may not be correctly covered by the boxes and this surely yields to imprecise results. 
 
 
 In practise, fractal dimension is widely employed to measure and estimate costline mapping. If the goal is to compare which among Australia and Great Britain has the biggest coastline, it would be enough to compute the FD of each map and the one having the biggest FD will be considered as the map with the biggest coastline.
@@ -76,11 +78,9 @@ y = \left\{
 $$
 
 #### 2.1.1 Crowd classification pipeline
+The crowd classification process can be divided into 4 steps (see figure Fig. 3). 
 
- As shown in the figure Fig. 3, 
-
-
-The figure Fig. 3 illustrates the general crowd detection pipeline.
+First of all, the color image $$I$$ is read. Then, $$I$$ goes through a chain of preprocessing functions. $$I$$  is converted to grayscale. After that, the edges are extracted using OpenCV's preprocessing function called $$cv2.dnn.blobFromImage$$. This function performs, among others, Mean Subtraction which serves to normalize the image and helps reducing illumination changes. Then, binarization is performed using $$cv2.adaptiveThreshold$$. The next step is contours detection. It is the most important preprocessing function because it draws the borders on which the fractal dimension is computed. The contours are detected using cv.findContours.
 
 <p align="center">
   <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_pipeline_classif.png">
