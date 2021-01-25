@@ -108,7 +108,7 @@ Let $$t_{ld}$$ be a threshold on the local density. $$t_{ld}$$ is used to filter
   Figure 4: Crowd localization pipeline.
 </p>
 
-#### 2.1.3 Visual illustration of crowd detection pipeline
+#### 2.3 Visual illustration of crowd detection pipeline
 In the two previous parts, I have explained how the classification and the localization are performed. In this part, I suggest to illustrate with the figure Fig. 5 the complete crowd detection pipeline. 
 
 <p align="center">
