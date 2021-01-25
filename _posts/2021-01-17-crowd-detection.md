@@ -127,7 +127,7 @@ As shown in the figure Fig. 5, the edge detection step is shared between the 2 s
 
 
 ## 2.4 Dataset
-CrowdHuman ia s Benchmark for Detecting Human in a Crowd [4]. It has been created by Shuai Shao et al. in 2018.  This benchmark includes some images which are not free. These particular images are protected with a special writing on it. This may distort the contour map and produce misleading results. To solve this problem, I have simply deleted the protected images. 
+CrowdHuman is A benchmark for detectin human in a crowd [4]. It has been created by Shuai Shao et al. in 2018.  This benchmark includes some images which are not free. These particular images are protected with a special writing on it. This may distort the contour map and produce misleading results. To solve this problem, I have simply deleted the protected images. 
 
 After cleaning the benchmark, only few images were kept. So, I was obliged to search for another dataset.
 
