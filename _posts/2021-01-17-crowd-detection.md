@@ -97,7 +97,7 @@ After reading and converting the color image $$I$$ to grayscale, the edges are e
 
 The next step is the local density computation. As $$I$$ has already been binarized, it only contains  white pixels (constituting the contours) and black pixels (constituting the  background). So, the contour map is devided into patches and on each patch the number of white pixels is accounted and saved into a matrix. Let $$M$$ be the resulting matrix which has the same size as the number of patches. $$M$$ represents the local density matrix.
 
-Let $$t_{ld}$$ be a threshold on the local density. $$t_{ld}$$ is used to filter $$M$$ and to keep the most dense patches. The keept patches reflect the pentential regions where a crowd may be located. After that, the keept patches are binarized to form a mask. The mask is used to draw the bounding box around the crowd.
+Let $$t_{ld}$$ be a threshold on the local density. $$t_{ld}$$ is used to filter $$M$$ and to keep the most dense patches. The keept patches reflect the pentential regions where a crowd may be located. After that, the keept patches are binarized and resized to the dimension of the original image in order to form the mask. Finally, the mask is used to draw the bounding box around the crowd.
 
 <p align="center">
   <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_pipeline_localiz.png">
@@ -105,8 +105,15 @@ Let $$t_{ld}$$ be a threshold on the local density. $$t_{ld}$$ is used to filter
   Figure 4: Crowd localization pipeline.
 </p>
 
+#### 2.1.1 Visual illustration of crowd detection pipeline
+In the two previous parts, I have explained how the classification and the localization are performed. Now, I will show with some pictures the result of each step of the crowd detection pipeline. 
 
- The components share some pre-pocessesing methods. which is based on fractal dimension and local density. 
+<p align="center">
+  <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_pipeline_ill.png">
+  <br>
+  Figure 5: Illustration of the complete crowd detection pipeline.
+</p>
+As shown in the figure Fig. 5, the edge detection step is shared between classification and localization. 
 ### Crowd classification 
 In order to perform crowd classification, I have built my classification on fractal dimension.
 ### Crowd localization
