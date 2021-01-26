@@ -85,7 +85,7 @@ First of all, the color image $$I$$ is read. Then, $$I$$ goes through a chain of
 The next step is contours detection which is the  most important preprocessing function. Because this step draws the borders on which $$FD$$ is directly computed. The contours are detected using $$cv2.findContours$$. Sometimes, the obtained contour map seem to have contours on the borders of the image which is unnecessary. A manual operation is added in order to delete these specific contours. Finally, the classification decision is formulated according to the comparison between FD and $$t_{FD}$$. 
 
 <p align="center">
-  <img width="614" height="10" src="/assets/images/crowd_detection/crowd_detection_pipeline_classif.png">
+  <img width="609" height="5" src="/assets/images/crowd_detection/crowd_detection_pipeline_classif.png">
   <br>
   Figure 3: Crowd classification pipeline.
 </p>
@@ -185,10 +185,11 @@ At the end of the process, the $$t_{LD}$$ which allows the best localization is 
 In this part, I will present some metrics to evaluate the proposed solution. For crowd classification, I have used Mean Squared Error (MSE). It is given by:
 <p align="center">
  $$
- MSE = \frac{i=1}{n}\sum_{t=1}^{n}(y_{i}_{real} - y_{i}_{predicted})^2
+ MSE = \frac{i=1}{n}\sum_{t=1}^{n}(y_{i_{real}} - y_{i_{predicted}})^2
 $$
 </p>
-Where n is the dataset size, y_{real} is the real class of the image $$i$$ and y_{predicted} is the predicted class of the image $$i$$.
+
+Where $$n$$ is the dataset size, y_{real} is the real class of the image $$i$$ and y_{predicted} is the predicted class of the image $$i$$.
 
 
 Just for simplification, I have defined a  personal metric to evaluate the crowd localization process. The metric is given by:
