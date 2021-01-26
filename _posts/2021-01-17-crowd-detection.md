@@ -140,7 +140,7 @@ A total of 715 images are selected where 505 images are dedicated to the class "
 The figure Fig. 6 shows some examples of the new benchmark.
 
 <p align="center">
-  <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_benchmark_examples.png">
+  <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_pipeline_illu.png">
   <br>
   Figure 6: Some examples of the fused benchmark from CrowdHuman and CityStreet benchmarks.
 </p>
@@ -162,7 +162,7 @@ For each image from the dataset, the first three steps are performed (read image
 <p align="center">
   <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_th_classif2.png">
   <br>
-  Figure 7: Test of different fractal dimension thresholds and their impact on the classification performance.
+  Figure 8: Test of different fractal dimension thresholds and their impact on the classification performance.
 </p>
 
 
