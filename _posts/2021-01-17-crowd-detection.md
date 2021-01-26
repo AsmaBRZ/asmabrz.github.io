@@ -15,7 +15,7 @@ In this post, I will present my university project on crowd detection. Crowd det
 <p align="center">
   <img width="450" height="250"  src="/assets/images/crowd_detection/crowd_detection_ex_pred.png">
   <br>
-  Figure 1:  Example of crowd detection using my model.
+  Figure 1:  Example of crowd detection using my solution.
 </p>
 
 ## 1. Applications of crowd detection
@@ -202,9 +202,10 @@ $$
 </p>
 Where $$P_{real}$$ are the real patches and $$P_{predicted}$$ are the predicted patches.
 
-If $$P_{real} ∩ P_{predicted} =  $$P_{real} $$ then  $$Loc_{metric} = 1$$. And if  $$P_{real} ∩ P_{predicted} =  Ø $$ then $$Loc_{metric} = 0$$. 
+If $$P_{real} ∩ P_{predicted} =  P_{real} $$ then  $$Loc_{metric} = 1$$. And if  $$P_{real} ∩ P_{predicted} =  Ø $$ then $$Loc_{metric} = 0$$. 
 
 So, $$Loc_{metric} 	∈ [0,1]$$ 
+
 
 ## 2.7 Running the Application
 I have deployed the solution via Heroku as a web application. To test the application, click on this link [Crowd Detection App](https://github.com/AsmaBRZ/Crowd-detection).
