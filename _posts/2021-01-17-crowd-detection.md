@@ -182,7 +182,10 @@ To optimize $$t_{LD}$$, I have performed the localization process many times. Ea
 At the end of the process, the $$t_{LD}$$ which allows the best localization is selected. Thus, the value of the local density threshold is set to $$t_{LD} = 0.7$$.
 
 ## 2.6 Evaluation
-In this part, I will present some metrics to evaluate the proposed solution. For crowd classification, I have used Mean Squared Error (MSE). It is given by:
+In this part, I will define some metrics to evaluate the proposed solution. After that, I will present quantitative and qualitative results. 
+
+## 2.6.1 Evaluation metrics
+To evaluate the crowd classification solution, I have used Mean Squared Error (MSE) which is  given by:
 <p align="center">
  $$
  MSE = \frac{1}{n}\sum_{i=1}^{n}(y_{i_{real}} - y_{i_{predicted}})^2
@@ -200,12 +203,19 @@ Just for simplification, I have defined a  personal metric to evaluate the crowd
  Loc_{metric} = \frac{size(P_{real} ∩ P_{predicted} )}{size(P_{real})}
 $$
 </p>
+
 Where $$P_{real}$$ are the real patches and $$P_{predicted}$$ are the predicted patches.
 
-If $$P_{real} ∩ P_{predicted} =  P_{real} $$ then  $$Loc_{metric} = 1$$. And if  $$P_{real} ∩ P_{predicted} =  Ø $$ then $$Loc_{metric} = 0$$. 
+If $$P_{real} ∩ P_{predicted} =  P_{real} $$ then  $$Loc_{metric} = 1$$. 
+
+If  $$P_{real} ∩ P_{predicted} =  Ø $$ then $$Loc_{metric} = 0$$. 
 
 So, $$Loc_{metric} 	∈ [0,1]$$ 
 
+## 2.6.1 quantitative results
+
+
+## 2.6.1 qualitative results
 
 ## 2.7 Running the Application
 I have deployed the solution via Heroku as a web application. To test the application, click on this link [Crowd Detection App](https://github.com/AsmaBRZ/Crowd-detection).
