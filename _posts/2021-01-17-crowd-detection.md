@@ -182,13 +182,23 @@ To optimize $$t_{LD}$$, I have performed the localization process many times. Ea
 At the end of the process, the $$t_{LD}$$ which allows the best localization is selected. Thus, the value of the local density threshold is set to $$t_{LD} = 0.7$$.
 
 ## 2.6 Evaluation
-## Running the Application
-To test the model, you click on this link to load the Violence Detection Web App.
+In this part, I will present some metrics to evaluate the proposed solution. For crowd classification, I have used Mean Squared Error (MSE). It is given by:
+<p align="center">
+ $$
+ \frac{1}{n}\sum_{t=1}^{n}(y_{real} - y_{predicted})^2
+$$
+</p>
+## 2.7 Running the Application
+To test the solution, you click on this link to load the Violence Detection Web App.
 
-## Further Steps
 
 ## Conclusion
-The proposed solution is still far from saturating the benchmark metrics. If complicated backgrounds are crossed, the model may miss  targets or may provide an imprecise bounding box. However, the model is only based on image processing methods for the task of crowd detection. In addition, no intelligence is behind the established process. 
+The proposed solution is still far from saturating the benchmark metrics. If complicated backgrounds are crossed, the model may miss  targets or may provide an imprecise bounding box. However, the model is only based on image processing methods for the task of crowd detection. In fact, no intelligence is behind the established process. 
+
+As future works, here are some potential areas to be explore :
+- Dataset augmentation.
+- Multiscale effects management.
+
 
 
 You can access the complete code via the [GitHub repository](https://github.com/AsmaBRZ/Crowd-detection).
