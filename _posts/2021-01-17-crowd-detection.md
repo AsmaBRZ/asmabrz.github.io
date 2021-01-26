@@ -85,7 +85,7 @@ First of all, the color image $$I$$ is read. Then, $$I$$ goes through a chain of
 The next step is contours detection which is the  most important preprocessing function. Because this step draws the borders on which $$FD$$ is directly computed. The contours are detected using $$cv2.findContours$$. Sometimes, the obtained contour map seem to have contours on the borders of the image which is unnecessary. A manual operation is added in order to delete these specific contours. Finally, the classification decision is formulated according to the comparison between FD and $$t_{FD}$$. 
 
 <p align="center">
-  <img width="694" height="80" src="/assets/images/crowd_detection/crowd_detection_pipeline_classif.png">
+  <img width="674" height="60" src="/assets/images/crowd_detection/crowd_detection_pipeline_classif.png">
   <br>
   Figure 3: Crowd classification pipeline.
 </p>
