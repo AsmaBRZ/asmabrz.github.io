@@ -33,7 +33,7 @@ Moreover, crowd detection is valuable for public event management. The superviso
 Another significant case where crowd detection can be relevant comes to track suspicious activity. For instance, people who are fighting necessarily attract other people and this may exacerbate the situation. So, with crowd detection the security officials receive information regarding suspicious activity in the area, and thus can rapidly intervene.
 
 <p align="center">
-  <img width="714" height="100" src="/assets/images/crowd_detection/crowd_detection_app.png">
+  <img width="674" height="60" src="/assets/images/crowd_detection/crowd_detection_app.png">
   <br>
   Figure 2:  Applications of crowd detection in different areas.
 </p>
