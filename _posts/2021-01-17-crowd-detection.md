@@ -189,7 +189,7 @@ In this part, I will present some metrics to evaluate the proposed solution. For
 $$
 </p>
 
-Where $$n$$ is the dataset size, y_{real} is the real class of the image $$i$$ and y_{predicted} is the predicted class of the image $$i$$.
+Where $$n$$ is the dataset size, $$y_{i_{real}} $$ is the real class of the image $$i$$ and $$ y_{i_{predicted}}$$ is the predicted class of the image $$i$$.
 
 
 Just for simplification, I have defined a  personal metric to evaluate the crowd localization process. The metric is given by:
