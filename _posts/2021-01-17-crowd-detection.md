@@ -185,7 +185,7 @@ At the end of the process, the $$t_{LD}$$ which allows the best localization is 
 In this part, I will present some metrics to evaluate the proposed solution. For crowd classification, I have used Mean Squared Error (MSE). It is given by:
 <p align="center">
  $$
- MSE = \frac{i=1}{n}\sum_{t=1}^{n}(y_{i_{real}} - y_{i_{predicted}})^2
+ MSE = \frac{1}{n}\sum_{i=1}^{n}(y_{i_{real}} - y_{i_{predicted}})^2
 $$
 </p>
 
