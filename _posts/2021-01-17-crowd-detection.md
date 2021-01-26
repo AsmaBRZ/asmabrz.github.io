@@ -200,9 +200,11 @@ Just for simplification, I have defined a  personal metric to evaluate the crowd
  Loc_{metric} = \frac{size(P_{real} ∩ P_{predicted} )}{size(P_{real})}
 $$
 </p>
-Where 
+Where $$P_{real}$$ are the real patches and $$P_{predicted}$$ are the predicted patches.
 
+If $$P_{real} ∩ P_{predicted} =  $$P_{real} $$ then  $$Loc_{metric} = 1$$. And if  $$P_{real} ∩ P_{predicted} =  Ø $$ then $$Loc_{metric} = 0$$. 
 
+So, $$Loc_{metric} 	∈ [0,1]$$ 
 
 ## 2.7 Running the Application
 I have deployed the solution via Heroku as a web application. To test the application, click on this link [Crowd Detection App](https://github.com/AsmaBRZ/Crowd-detection).
