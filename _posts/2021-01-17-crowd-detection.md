@@ -161,7 +161,7 @@ For each image from the dataset, the first three steps are performed (read image
 
 $$t_{FD}$$ should be thoroughly chosen. It should be picked from the interval delimited by the red rectangle (see figure Fig. 7). This interval represents the boundaries between "crowd" and "no crowd" classes. 
 
-Now let's take a closer look at this interval. 8 classification experiments have been realized using each threshold of the interval {1.70;1.77}. The figure Fig. 8 shows the True Positive (TP) and the False Negative (FN) for each class and for each threshold. 
+Now let's take a closer look at this interval. 8 classification experiments have been realized using each threshold of the interval [1.70;1.77]. The figure Fig. 8 shows the True Positive (TP) and the False Negative (FN) for each class and for each threshold. 
 
 <p align="center">
   <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_th_classif2.png">
@@ -171,7 +171,16 @@ Now let's take a closer look at this interval. 8 classification experiments have
 
 If $$t_{FD} = 1.70$$, the images containing a "crowd" are correctly classified with a percentage of 87%. However, 67% of images with "no crowd" are classified as "crowd". So this thresold does not allow balancing between classification performance for each class. The best value that permits such balance is when $$1.75$$. In this case, the TP of "crowd" images consist of 72% and the TP of "no crowd" images consist of 70% (betwen TP and FN). 
 
-Thus, the value of fractal dimension threshold is fixed as $$t_{FD} = 1.75$$
+Thus, the value of the fractal dimension threshold is set to $$t_{FD} = 1.75$$.
+
+Now, let's move on to local density threshold optimization.
+
+### 2.5.2 Local density threshold optimization
+The optimization of the local density threshold is different from the optimization of the fractal dimension threshold. $$t_{LD}$$ filters the number of white pixels within a given patch of the image. It takes a value in the interval [0,1]. Concretely, the number of white pixels is computed for each patch. Let $$max_patch$$ be the maximum number of white pixels. If the number of white pixels of a given patch is greather than $$max_patch$ x t_{LD}$$, then the patch is kept to be used later to construct the mask.
+
+To optimize $$t_{LD}$$, I have performed the localization process many times. Each time, $$t_{LD} was set to a different value. 
+At the end of the process, the $$t_{LD} which allows the best localization is selected. Thus, the value of the local density threshold is set to $$t_{LD} = 0.7$$.
+
 
 
 ## 2.6 Evaluation
