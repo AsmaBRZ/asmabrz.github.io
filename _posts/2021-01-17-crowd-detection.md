@@ -85,7 +85,7 @@ First of all, the color image $$I$$ is read. Then, $$I$$ goes through a chain of
 The next step is contours detection which is the  most important preprocessing function. Because this step draws the borders on which $$FD$$ is directly computed. The contours are detected using $$cv2.findContours$$. Sometimes, the obtained contour map seem to have contours on the borders of the image which is unnecessary. A manual operation is added in order to delete these specific contours. Finally, the classification decision is formulated according to the comparison between FD and $$t_{FD}$$. 
 
 <p align="center">
-  <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_pipeline_classif.png">
+  <img width="714" height="100" src="/assets/images/crowd_detection/crowd_detection_pipeline_classif.png">
   <br>
   Figure 3: Crowd classification pipeline.
 </p>
@@ -154,7 +154,7 @@ The optimization step consists of determining the two parameters $$t_{FD}$$ (fra
 For each image from the dataset, the first three steps are performed (read image, image preprocessing and fractal dimension computation). The figure Fig. 7 shows the fractal dimension values of the entire dataset. For example, approximately 6 images have a fractal dimension of 1.7.
 
 <p align="center">
-  <img width="704" height="90" src="/assets/images/crowd_detection/crowd_detection_th_classif1.png">
+  <img width="684" height="70" src="/assets/images/crowd_detection/crowd_detection_th_classif1.png">
   <br>
   Figure 7: Plot of fractal dimension values of the entire dataset.
 </p>
