@@ -33,7 +33,7 @@ Moreover, crowd detection is valuable for public event management. The superviso
 Another significant case where crowd detection can be relevant comes to track suspicious activity. For instance, people who are fighting necessarily attract other people and this may exacerbate the situation. So, with crowd detection the security officials receive information regarding suspicious activity in the area, and thus can rapidly intervene.
 
 <p align="center">
-  <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_app.png">
+  <img width="734" height="120" src="/assets/images/crowd_detection/crowd_detection_app.png">
   <br>
   Figure 2:  Applications of crowd detection in different areas.
 </p>
@@ -140,7 +140,7 @@ A total of 715 images are selected where 505 images are dedicated to the class "
 The figure Fig. 6 shows some examples of the resulted dataset.
 
 <p align="center">
-  <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_pipeline_illu.png">
+  <img width="734" height="120" src="/assets/images/crowd_detection/crowd_detection_pipeline_illu.png">
   <br>
   Figure 6: Some examples of the constructed dataset.
 </p>
@@ -154,7 +154,7 @@ The optimization step consists of determining the two parameters $$t_{FD}$$ (fra
 For each image from the dataset, the first three steps are performed (read image, image preprocessing and fractal dimension computation). The figure Fig. 7 shows the fractal dimension values of the entire dataset. For example, approximately 6 images have a fractal dimension of 1.7.
 
 <p align="center">
-  <img width="684" height="70" src="/assets/images/crowd_detection/crowd_detection_th_classif1.png">
+  <img width="664" height="50" src="/assets/images/crowd_detection/crowd_detection_th_classif1.png">
   <br>
   Figure 7: Plot of fractal dimension values of the entire dataset.
 </p>
