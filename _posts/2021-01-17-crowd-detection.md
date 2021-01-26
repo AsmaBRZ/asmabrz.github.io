@@ -19,7 +19,7 @@ In this post, I will present my university project on crowd detection. Crowd det
 </p>
 
 ## 1. Applications of crowd detection
-According to Google Scholar, 1460 papers have been published concerning crowd detection at this day. There are a myriad of areas where crowd detection is useful [4]. The figure Fig. 2 shows some of these areas.
+According to Google Scholar, 1460 papers have been published concerning crowd detection at this day. There are a myriad of areas where crowd detection is useful [5]. The figure Fig. 2 shows some of these areas.
 
 
 Thanks to the amazing progress of technology in the medical field, cancer patients can  more and more be saved. Detecting a certain number of cancerous cells, thus forming a crowd, may help for an early-stage diagnosis.
@@ -46,7 +46,7 @@ In this section, I will explain, step by step, how to build a crowd detection pi
 In this project, the crowd classification problem is resolved using fractal dimension. But, before proceeding with classification  problem, I would like to present the fractal dimension concept. 
 
 #### 2.1.1 Fractal dimension
-A. Backes  et al. explains the concept of fractal dimension as: "A measure of how fast the length of a curve increases as the size of the measuring stick is shortened" [1]. And Robert L. Devaney defines the fractal dimension as: "A measure of how complicated a self-similar figure is" [2]. 
+A. Backes  et al. explains the concept of fractal dimension as: "A measure of how fast the length of a curve increases as the size of the measuring stick is shortened" [2]. And Robert L. Devaney defines the fractal dimension as: "A measure of how complicated a self-similar figure is" [3]. 
 
 There are several ways to compute the fractal dimension. I have chosen the box bounting method, aka Minkowski-Bouligand Dimension. The fractal dimension (FD) is given by:
 
@@ -106,7 +106,7 @@ After reading and converting the color image $$I$$ to grayscale, the edges are e
 
 The next step is the local density computation. As $$I$$ has already been binarized, it only contains  white pixels (constituting the contours) and black pixels (constituting the  background). So, the contour map is devided into patches and on each patch the number of white pixels is accounted and saved into a matrix. Let $$M$$ be the resulting matrix which has the same size as the number of patches. $$M$$ represents the local density matrix.
 
-Let $$t_{ld}$$ be a threshold on the local density. $$t_{ld}$$ is used to filter $$M$$ and to keep the most dense patches. The keept patches reflect the pentential regions where a crowd may be located. After that, the keept patches are binarized and resized to the dimension of the original image in order to form the mask. Finally, the mask is used to draw the bounding box around the crowd.
+Let $$t_{LD}$$ be a threshold on the local density. $$t_{LD}$$ is used to filter $$M$$ and to keep the most dense patches. The kept patches reflect the pentential regions where a crowd may be located. After that, the kept patches are binarized and resized to the dimension of the original image in order to form the mask. Finally, the mask is used to draw the bounding box around the crowd.
 
 
 
@@ -118,7 +118,7 @@ In the two previous parts, I have explained how the classification and the local
   <br>
   Figure 5: Illustration of the complete crowd detection pipeline.
 </p>
-As shown in the figure Fig. 5, the edge detection step is shared between the 2 separate branches of classification and  localization. For the classification and localization, only relevant steps are represented such as masking image or contour map.   At the end, the result is given by the class (crowd or no crowd) and the bounding box.
+As shown in the figure Fig. 5, the edge detection step is shared between the 2 separate branches of classification and  localization. For the classification and localization, only relevant steps are represented such as masking image or contour map.   At the end, the result is given by the class (crowd or no crowd) and the bounding box in red.
 
 ## 2.3 Model implementation and software requirements
 - The entire code is written in Python 3.8.5. 
@@ -131,10 +131,39 @@ CrowdHuman is A benchmark for detectin human in a crowd [4]. It has been created
 
 After cleaning the benchmark, only few images were kept. So, I was obliged to search for another dataset.
 
-The second benchmark I have studied is CityStreet [5][6]. CityStreet has been published in 2019 by Qi Zhang et al. Unlike CrowdHuman, CityStreet contains images of people which are sometimes so far from the camera. As I did not managed multi-scale images, I was brought to work only with images of the same scale.
+The second benchmark I have studied is CityStreet [6][7]. CityStreet has been published in 2019 by Qi Zhang et al. Unlike CrowdHuman, CityStreet contains images of people which are sometimes so far from the camera. As I did not managed multi-scale images, I was brought to work only with images of the same scale. So, I only kept few images where people are close to the camera.
  
+Then, I have noticed that the majority of the kept images represented crowded scene. To leveling this problem, I have picked some images from Mask Dataset [1].
 
-## 2.5 Model training
+A total of 715 images are selected where 505 images are dedicated to the class "crowd" and 210 images are dedicated to the class "no crowd".
+
+The figure Fig. 6 shows some examples of the new benchmark.
+
+<p align="center">
+  <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_benchmark_examples.png">
+  <br>
+  Figure 6: Some examples of the fused benchmark from CrowdHuman and CityStreet benchmarks.
+</p>
+
+
+## 2.5 Parameter optimization
+The optimization step consists of determining the two parameters $$t_{FD}$$ (fractal dimension threshold) and $$t_{LD}$$ (local density threshold). Let's begin with $$t_{FD}$$.
+
+### 2.5.1 Fractal dimension threshold optimization
+For each image from the dataset, the first three steps are performed (read image, image preprocessing and fractal dimension computation). The figure Fig. 7 shows the fractal dimension values of the entire dataset. For example, approximately 6 images have a fractal dimension of 1.7.
+
+<p align="center">
+  <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_th_classif1.png">
+  <br>
+  Figure 7: Plot of fractal dimension values of the entire dataset.
+</p>
+
+
+<p align="center">
+  <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_th_classif2.png">
+  <br>
+  Figure 7: Test of different fractal dimension thresholds and their impact on the classification performance.
+</p>
 
 
 ## 2.6 Evaluation
@@ -150,15 +179,17 @@ The proposed model is still far from saturating the benchmark metrics. If compli
 You can access the complete code via the [GitHub repository](https://github.com/AsmaBRZ/Crowd-detection).
 
 ## References
-[1] A. Backes and O. Bruno. Fractal and multi-scale fractal dimension analysis : a comparative study of bouligand-minkowski method.ArXiv, abs/1201.3153, 2012.
+[1] Mask dataset. https ://makeml.app/datasets/mask, 2020
 
-[2] Robert L. Devaney. Fractal dimension. http ://math.bu.edu/DYSYS/chaos-game/node6.html,1995.
+[2] A. Backes and O. Bruno. Fractal and multi-scale fractal dimension analysis : a comparative study of bouligand-minkowski method.ArXiv, abs/1201.3153, 2012.
 
-[3] Shuai Shao, Zijian Zhao, Boxun Li, Tete Xiao, Gang Yu, Xiangyu Zhang, and Jian Sun. Crowd-human : A benchmark for detecting human in a crowd.arXiv preprint arXiv :1805.00123, 2018
+[3] Robert L. Devaney. Fractal dimension. http ://math.bu.edu/DYSYS/chaos-game/node6.html,1995.
 
-[4] Nilam Sjarif, Siti Mariyam Shamsuddin, Siti Mohd Hashim, and Siti Yuhaniz. Crowd analysis and its applications. volume 179, pages 687–697, 01 2011.
+[4] Shuai Shao, Zijian Zhao, Boxun Li, Tete Xiao, Gang Yu, Xiangyu Zhang, and Jian Sun. Crowd-human : A benchmark for detecting human in a crowd.arXiv preprint arXiv :1805.00123, 2018
 
-[5] Qi Zhang and Antoni B Chan.  Wide-area crowd counting via ground-plane density mapsand multi-view fusion cnns. InProceedings of the IEEE Conference on Computer Vision andPattern Recognition, page 8297–8306, 2019.
+[5] Nilam Sjarif, Siti Mariyam Shamsuddin, Siti Mohd Hashim, and Siti Yuhaniz. Crowd analysis and its applications. volume 179, pages 687–697, 01 2011.
 
-[6] Qi Zhang and Antoni B Chan. Wide-area crowd counting : Multi-view fusion networks forcounting in large scenes. Inhttps ://arxiv.org/abs/2012.00946, 2020
+[6] Qi Zhang and Antoni B Chan.  Wide-area crowd counting via ground-plane density mapsand multi-view fusion cnns. InProceedings of the IEEE Conference on Computer Vision andPattern Recognition, page 8297–8306, 2019.
+
+[7] Qi Zhang and Antoni B Chan. Wide-area crowd counting : Multi-view fusion networks forcounting in large scenes. Inhttps ://arxiv.org/abs/2012.00946, 2020
 
