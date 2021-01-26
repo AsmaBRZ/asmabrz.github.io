@@ -188,9 +188,15 @@ In this part, I will present some metrics to evaluate the proposed solution. For
  MSE = \frac{1}{n}\sum_{t=1}^{n}(y_{real} - y_{predicted})^2
 $$
 </p>
+
+Just for simplification, I have defined a  personal metric to evaluate the crowd localization process. The metric is given by: 
 ## 2.7 Running the Application
 To test the solution, you click on this link to load the Violence Detection Web App.
-
+<p align="center">
+ $$
+ Loc_{metric} = \frac{size(P_{real} ∩ P_{predicted} )}{size(P_{real})}
+$$
+</p>
 
 ## Conclusion
 The proposed solution is still far from saturating the benchmark metrics. If complicated backgrounds are crossed, the model may miss  targets or may provide an imprecise bounding box. However, the model is only based on image processing methods for the task of crowd detection. In fact, no intelligence is behind the established process. 
