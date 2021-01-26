@@ -191,15 +191,23 @@ $$
 Where n is the dataset size, y_{real} is the real class of the image $$i$$ and y_{predicted} is the predicted class of the image $$i$$.
 
 
-Just for simplification, I have defined a  personal metric to evaluate the crowd localization process. The metric is given by: 
-## 2.7 Running the Application
-To test the solution, you click on this link to load the Violence Detection Web App.
+Just for simplification, I have defined a  personal metric to evaluate the crowd localization process. The metric is given by:
+
+
+
 <p align="center">
  $$
  Loc_{metric} = \frac{size(P_{real} ∩ P_{predicted} )}{size(P_{real})}
 $$
 </p>
 Where 
+
+
+
+## 2.7 Running the Application
+I have deployed the solution via Heroku as a web application. To test the application, click on this link [Crowd Detection App](https://github.com/AsmaBRZ/Crowd-detection).
+
+
 
 ## Conclusion
 The proposed solution is still far from saturating the benchmark metrics. If complicated backgrounds are crossed, the model may miss  targets or may provide an imprecise bounding box. However, the model is only based on image processing methods for the task of crowd detection. In fact, no intelligence is behind the established process. 
