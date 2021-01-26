@@ -114,7 +114,7 @@ Let $$t_{LD}$$ be a threshold on the local density. $$t_{LD}$$ is used to filter
 In the two previous parts, I have explained how the classification and the localization are performed. In this part, I suggest to illustrate with the figure Fig. 5 the complete crowd detection pipeline. 
 
 <p align="center">
-  <img width="764" height="50" src="/assets/images/crowd_detection/crowd_detection_pipeline_ill.png">
+  <img width="784" height="70" src="/assets/images/crowd_detection/crowd_detection_pipeline_ill.png">
   <br>
   Figure 5: Illustration of the complete crowd detection pipeline.
 </p>
@@ -193,7 +193,6 @@ Where $$n$$ is the dataset size, $$y_{i_{real}} $$ is the real class of the imag
 
 
 Just for simplification, I have defined a  personal metric to evaluate the crowd localization process. The metric is given by:
-
 
 
 <p align="center">
