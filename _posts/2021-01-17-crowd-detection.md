@@ -184,7 +184,7 @@ At the end of the process, the $$t_{LD}$$ which allows the best localization is 
 ## 2.6 Evaluation
 In this part, I will define some metrics to evaluate the proposed solution. After that, I will present quantitative and qualitative results. 
 
-## 2.6.1 Evaluation metrics
+### 2.6.1 Evaluation metrics
 To evaluate the crowd classification solution, I have used Mean Squared Error (MSE) which is  given by:
 <p align="center">
  $$
@@ -212,10 +212,10 @@ If  $$P_{real} ∩ P_{predicted} =  Ø $$ then $$Loc_{metric} = 0$$.
 
 So, $$Loc_{metric} 	∈ [0,1]$$ 
 
-## 2.6.1 quantitative results
+### 2.6.1 quantitative results
 
 
-## 2.6.1 qualitative results
+### 2.6.1 qualitative results
 
 ## 2.7 Running the Application
 I have deployed the solution via Heroku as a web application. To test the application, click on this link [Crowd Detection App](https://github.com/AsmaBRZ/Crowd-detection).
