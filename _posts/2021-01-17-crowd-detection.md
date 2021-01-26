@@ -154,7 +154,7 @@ The optimization step consists of determining the two parameters $$t_{FD}$$ (fra
 For each image from the dataset, the first three steps are performed (read image, image preprocessing and fractal dimension computation). The figure Fig. 7 shows the fractal dimension values of the entire dataset. For example, approximately 6 images have a fractal dimension of 1.7.
 
 <p align="center">
-  <img width="714" height="100" src="/assets/images/crowd_detection/crowd_detection_th_classif1.png">
+  <img width="704" height="90" src="/assets/images/crowd_detection/crowd_detection_th_classif1.png">
   <br>
   Figure 7: Plot of fractal dimension values of the entire dataset.
 </p>
@@ -179,9 +179,7 @@ Now, let's move on to local density threshold optimization.
 The optimization of the local density threshold is different from the optimization of the fractal dimension threshold. $$t_{LD}$$ filters the number of white pixels within a given patch of the image. It takes a value in the interval [0,1]. Concretely, the number of white pixels is computed for each patch. Let $$max_patch$$ be the maximum number of white pixels. If the number of white pixels of a given patch is greather than $$max_patch$ x t_{LD}$$, then the patch is kept to be used later to construct the mask.
 
 To optimize $$t_{LD}$$, I have performed the localization process many times. Each time, $$t_{LD} was set to a different value. 
-At the end of the process, the $$t_{LD} which allows the best localization is selected. Thus, the value of the local density threshold is set to $$t_{LD} = 0.7$$.
-
-
+At the end of the process, the $$t_{LD}$$ which allows the best localization is selected. Thus, the value of the local density threshold is set to $$t_{LD} = 0.7$$.
 
 ## 2.6 Evaluation
 ## Running the Application
