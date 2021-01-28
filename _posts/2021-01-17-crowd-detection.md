@@ -10,7 +10,7 @@ toc: false
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-In this post, I will present my university project on crowd detection. Crowd detection is the task of classifying and localizing crowd in images (see Fig. 1). In this project, I am particularly interested in pedestrians crowd detection. I mostly used image processing methods to isolate the crowd from non-interesting objetcs and background. Specifically, the classification task is based on fractal dimension and the localization task is based on local density.
+In this post, I will present my university project on crowd detection. Crowd detection is the task of classifying and localizing a crowd in images (see Fig. 1). In this project, I am particularly interested in pedestrians crowd detection. I mostly used image processing methods to isolate the crowd from non-interesting objetcs and background. Specifically, the classification task is based on fractal dimension and the localization task is based on local density.
 
 <p align="center">
   <img width="450" height="250"  src="/assets/images/crowd_detection/crowd_detection_ex_pred.png">
@@ -48,7 +48,7 @@ In this project, the crowd classification problem is resolved using fractal dime
 #### 2.1.1 Fractal dimension
 A. Backes  et al. explains the concept of fractal dimension as: "A measure of how fast the length of a curve increases as the size of the measuring stick is shortened" [2]. And Robert L. Devaney defines the fractal dimension as: "A measure of how complicated a self-similar figure is" [3]. 
 
-There are several ways to compute the fractal dimension. I have chosen the box bounting method, aka Minkowski-Bouligand Dimension. The fractal dimension (FD) is given by:
+There are several ways to compute the fractal dimension. I have chosen the box counting method, aka Minkowski-Bouligand Dimension. The fractal dimension (FD) is given by:
 
 <p align="center">
 $$ FD = \lim_{r\to 0} \frac{log(N(r))}{log(\frac{1}{r})}$$ 
@@ -80,7 +80,7 @@ $$
 #### 2.1.3 Crowd classification pipeline
 The crowd classification process can be divided into 4 steps (see figure Fig. 3). 
 
-First of all, the color image $$I$$ is read. Then, $$I$$ goes through a chain of preprocessing functions. $$I$$  is converted to grayscale. After that, the edges are extracted using OpenCV's preprocessing function called $$cv2.dnn.blobFromImage$$. This function performs, among others, Mean Subtraction which serves to normalize the image and helps reducing illumination changes. Then, binarization is performed using $$cv2.adaptiveThreshold$$. 
+First of all, the color image $$I$$ is read. Then, $$I$$ goes through a chain of preprocessing functions. The edges are extracted from $$I$$ using OpenCV's preprocessing function called $$cv2.dnn.blobFromImage$$. This function performs, among others, Mean Subtraction which serves to normalize the image and helps reducing illumination changes. Then, binarization is performed using $$cv2.adaptiveThreshold$$. 
 
 The next step is contours detection which is the  most important preprocessing function. Because this step draws the borders on which $$FD$$ is directly computed. The contours are detected using $$cv2.findContours$$. Sometimes, the obtained contour map seem to have contours on the borders of the image which is unnecessary. A manual operation is added in order to delete these specific contours. Finally, the classification decision is formulated according to the comparison between FD and $$t_{FD}$$. 
 
@@ -91,7 +91,7 @@ The next step is contours detection which is the  most important preprocessing f
 </p>
 
 #### 2.2 Crowd localization
-The crowd localization in this project is defined according to the local density. Naturally, crowded scene contains a high density compared with a scene containing a few people. The local density is computed from the contour map. Then,  it is thresholded and used to create the bounding box. The bounding box is a rectangle which covers the crowd if it exists.
+The crowd localization in this project is defined according to the local density. Naturally, crowded scene contains a high density compared with a scene containing a few people. The local density is computed from the contour map. Then,  it is thresholded and used to create the bounding box. The bounding box is a set of rectangles which covers the crowd if it exists.
 
 
 Now, let's dive into an elaborated description of the crowd localization pipeline. This pipeline consists of a chain of 5  steps (see figure Fig. 4). 
@@ -102,7 +102,7 @@ Now, let's dive into an elaborated description of the crowd localization pipelin
   Figure 4: Crowd localization pipeline.
 </p>
 
-After reading and converting the color image $$I$$ to grayscale, the edges are extracted in the same way as for classification. Contrary to the classification process, $$I$$ is smoothed before being binarized. Smoothing helps to reduce noise and details that are meaningless for the localization problem such as facial features. Next, the contours are detected following the same method as for classification. 
+First, the  color image $$I$$ is read. Contrary to the classification process, $$I$$ is smoothed before the edges are extracted. Smoothing helps to reduce noise and details that are meaningless for the localization problem such as facial features. After that, the edges are extracted and binarizzd in the same way as for classification.  Next, the contours are detected following the same method as for classification. 
 
 The next step is the local density computation. As $$I$$ has already been binarized, it only contains  white pixels (constituting the contours) and black pixels (constituting the  background). So, the contour map is devided into patches and on each patch the number of white pixels is accounted and saved into a matrix. Let $$M$$ be the resulting matrix which has the same size as the number of patches. $$M$$ represents the local density matrix.
 
@@ -127,7 +127,7 @@ As shown in the figure Fig. 5, the edge detection step is shared between the 2 s
 
 
 ## 2.4 Dataset
-CrowdHuman is A benchmark for detectin human in a crowd [4]. It has been created by Shuai Shao et al. in 2018.  This benchmark includes some images which are not free. These particular images are protected with a special writing on it. This may distort the contour map and produce misleading results. To solve this problem, I have simply deleted the protected images. 
+CrowdHuman is a benchmark for detection human in a crowd [4]. It has been created by Shuai Shao et al. in 2018.  This benchmark includes some images which are not free. These particular images are protected with a special writing on it. This may distort the contour map and produce misleading results. To solve this problem, I have simply deleted the protected images. 
 
 After cleaning the benchmark, only few images were kept. So, I was obliged to search for another dataset.
 
@@ -135,7 +135,9 @@ The second benchmark I have studied is CityStreet [6][7]. CityStreet has been pu
  
 Then, I have noticed that the majority of the kept images represented crowded scene. To leveling this problem, I have picked some images from Mask Dataset [1].
 
-A total of 715 images are selected where 505 images are dedicated to the class "crowd" and 210 images are dedicated to the class "no crowd".
+A total of 715 images are selected for the optimization phase. 505 images are dedicated to the class "crowd" and 210 images are dedicated to the class "no crowd". 
+
+For the test phase, 447 images are selected. 360 images are dedicated to the class "crowd" and 87 images are dedicated to the class "no crowd". 
 
 The figure Fig. 6 shows some examples of the resulted dataset.
 
@@ -195,12 +197,12 @@ $$
 Where $$n$$ is the dataset size, $$y_{i_{real}} $$ is the real class of the image $$i$$ and $$ y_{i_{predicted}}$$ is the predicted class of the image $$i$$.
 
 
-Just for simplification, I have defined a  personal metric to evaluate the crowd localization process. The metric is given by:
+Just for simplification, I have defined a  personal metric (inspired from IOU) to evaluate the crowd localization process. The metric is given by:
 
 
 <p align="center">
  $$
- Loc_{metric} = \frac{size(P_{real} ∩ P_{predicted} )}{size(P_{real})}
+ Loc_{metric} = \frac{size(P_{real} ∩ P_{predicted} )}{size(P_{real} ∪ P_{predicted}  )}
 $$
 </p>
 
@@ -212,13 +214,22 @@ If  $$P_{real} ∩ P_{predicted} =  Ø $$ then $$Loc_{metric} = 0$$.
 
 So, $$Loc_{metric} 	∈ [0,1]$$ 
 
-### 2.6.1 quantitative results
+### 2.6.1 Quantitative results
+I have performed some statistics on both  The table below shows the obtained results (figure Fig. 9).
+
+<p align="center">
+  <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_eval.png">
+  <br>
+  Figure 9: Statistics on optimization and test phases.
+</p>
 
 
-### 2.6.1 qualitative results
+I have calculated  $$MSE$$ and $$ Loc_{metric}$$ on the training and test datasets. 
+
+### 2.6.1 Qualitative results
 
 ## 2.7 Running the Application
-I have deployed the solution via Heroku as a web application. To test the application, click on this link [Crowd Detection App](https://github.com/AsmaBRZ/Crowd-detection).
+I have deployed the solution via Heroku as a web application. To test the application, click on this link [Crowd Detection App](https://crowd-detection-app.herokuapp.com/).
 
 
 
@@ -228,7 +239,7 @@ The proposed solution is still far from saturating the benchmark metrics. If com
 As future works, here are some potential areas to be explore :
 - Dataset augmentation.
 - Multiscale effects management.
-
+- Improve the localization precision.
 
 
 You can access the complete code via the [GitHub repository](https://github.com/AsmaBRZ/Crowd-detection).
