@@ -10,7 +10,9 @@ toc: false
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-In this post, I will present my university project on crowd detection. Crowd detection is the task of classifying and localizing a crowd in images (see Fig. 1). In this project, I am particularly interested in pedestrians crowd detection. I mostly used image processing methods to isolate the crowd from non-interesting objetcs and background. Specifically, the classification task is based on fractal dimension and the localization task is based on local density.
+In this post, I will present my university project on crowd detection. This project has been realized during my second master's degree at Paris-Descartes University (Vision and Intelligent Machine specialization). 
+
+Crowd detection is the task of classifying and localizing a crowd in images (see Fig. 1). In this project, I am particularly interested in pedestrians crowd detection. I mostly used image processing methods to isolate the crowd from non-interesting objetcs and background. Specifically, the classification task is based on fractal dimension and the localization task is based on local density.
 
 <p align="center">
   <img width="450" height="250"  src="/assets/images/crowd_detection/crowd_detection_ex_pred.png">
@@ -215,7 +217,7 @@ If  $$P_{real} ∩ P_{predicted} =  Ø $$ then $$Loc_{metric} = 0$$.
 So, $$Loc_{metric} 	∈ [0,1]$$ 
 
 ### 2.6.1 Quantitative results
-I have performed some statistics on both  The table below shows the obtained results (figure Fig. 9).
+Here are some statistics on both optimization and test phases. The table below shows the obtained results (figure Fig. 9).
 
 <p align="center">
   <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_eval.png">
@@ -223,13 +225,59 @@ I have performed some statistics on both  The table below shows the obtained res
   Figure 9: Statistics on optimization and test phases.
 </p>
 
+For the optimization phase, the method classifies correctly 342 crowded images among 361 crowded images. 154 uncrowded are correctly classified among 210 images. In addition, I have found $$MSE = 0.306$$ and $$Loc_{metric} =0.66$$. 
+
+For the test phase, the method does better for the uncrowded images but for the crowded images, the results od the optimization phase are better. The computed $$MSE$$ is approximately identic to the $$MSE$$ obtained at the optimization phase. So, $$MSE = 0.307$$. And I have found $$Loc_{metric} =0.68$$ which is also very close to the obtained result at the optimization phase.  
+
+Then for the metrics, 
 
 I have calculated  $$MSE$$ and $$ Loc_{metric}$$ on the training and test datasets. 
 
 ### 2.6.1 Qualitative results
+Now, let's analyze some qualitative results.
+<p align="center">
+  <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_q1.png">
+  <br>
+  Figure 10: Qualitative results (part 1).
+</p>
+
+The figure Fig. 10 shows some results of the crowd detection process. The first thing to notice is that the proposed solution allow the bounding box to take an irregular form. Which means that it is not obliged that the bounding box be of a rectangular form.
+
+In addition, almost all classical deep learning methods use rectangular bounding box. Such a mothd would cover the crowded area in the image on the top right of the figure Fig. 10 with a bigger rectangular bounding box as shown in the figure Fig. 11. The result is less precise than mine.
+
+<p align="center">
+  <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_q2.png">
+  <br>
+  Figure 11: A potential prediction by a deep learning based model.
+</p>
+
+But this method presents some weaknesses. First, if there are some trees or buildings the result is less accurate (see figure Fig. 12). These areas are strongly textured and by the way present a high contours regions. 
+
+<p align="center">
+  <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_q3.png">
+  <br>
+  Figure 12: Qualitative results(part 2).
+</p>
+
+Also, is an image is taken with a focus in the center of the image for example, the other regions are naturally blurred. The figure Fig. 13 shows this case. Consequently, the blurred areags will not be detected.
+
+<p align="center">
+  <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_q4.png">
+  <br>
+  Figure 13: Qualitative results(part 3).
+</p>
+
 
 ## 2.7 Running the Application
-I have deployed the solution via Heroku as a web application. To test the application, click on this link [Crowd Detection App](https://crowd-detection-app.herokuapp.com/).
+I have deployed the solution via Heroku as a web application. To test the application, click on this link [Crowd Detection App](https://crowd-detection-app.herokuapp.com/). 
+
+The figure Fig. 14 illustrates the web application page.
+
+<p align="center">
+  <img width="754" height="140" src="/assets/images/crowd_detection/crowd_detection_webapp.png">
+  <br>
+  Figure 14: Crowd detection web application.
+</p>
 
 
 
