@@ -12,6 +12,10 @@ toc: false
 
 [Neural Style Transfer](https://arxiv.org/abs/1508.06576) is a computer vision approach to adopt an image to the drawing style of another one. This method produces artificial art based on existing drawing styles. It was first proposed in 2015 and then extended and improved to other works: [Universal Style Transfer](https://arxiv.org/pdf/1705.08086.pdf), [MGANs](https://arxiv.org/pdf/1604.04382.pdf), [Coherent Online Video Style Transfer](https://arxiv.org/pdf/1703.09211.pdf)...etc. 
 
+## Principle
+Neural Style Transfer (NST) algorithm takes 2 input images. It extracts the content from the first image $Ic$ and the style from the second image $Ts$. It outputs an image $Ir$ representing the content of $Ic$ in the style of $Is$. 
+
+
 
 ##  Qualitative Results
 
