@@ -15,8 +15,8 @@ gallery_cities:
 
 ---
 
-Hello guys!
+I’m currently a third-year Ph.D. candidate at CEA-Saclay and ENPC-LIGM, supervised by Vincent Lepetit, and specializing in Computer Vision, with a research focus on 6D object detection. My current work centers on 6D object pose distribution.
 
-I'm a 3rd-year PhD student in Computer Vision. I am working on 6D Object detection, with a focus on novel object detection without retraining the network. I have 2 master's degree: the first one from Pierre and Marie Curie University where I studied Artifcial Intelligence, MultiAgents Systems and Robotics. The robotics courses pushed me to develop a particular interest in vision applications, I decided to devote a year to specialize in vision by doing a second master's degree at Paris-Descartes University, entitled Vision & Intelligent Machine. 
+I hold two master’s degrees. My first is from Pierre and Marie Curie University, where I specialized in Artificial Intelligence, Multi-Agent Systems, and Robotics. This exposure to robotics sparked my deep interest in vision-based applications, motivating me to pursue a second master’s degree in Vision and Intelligent Machines at Paris-Descartes University. This additional year allowed me to deepen my expertise in Computer Vision and further refine my technical foundation in intelligent machine perception.
 
 This website is a container for personal and university projects in Artificial Intelligence, Robotics and Vision. 
