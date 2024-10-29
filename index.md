@@ -5,28 +5,6 @@ header:
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
 
 feature_row:
-  - image_path: /assets/images/teasers/classif.png
-    alt: "2016 election map and cartogram"
-    title: "Image classification"
-    excerpt: "Classification of images containing dog, cat, truck...etc."
-    url: "https://image-classif.herokuapp.com/"
-    btn_label: "Open"
-    btn_class: "btn--primary"
-  - image_path: /assets/images/teasers/cells-seg.png
-    alt: "2016 election map and cartogram"
-    title: "Biomedical image segmentation"
-    excerpt: "Segmentation of biomedical images using Nested-Unet architecture (UNet++)."
-    url: "https://image-classif.herokuapp.com/"
-    btn_label: "Open"
-    btn_class: "btn--primary"
-  - image_path: assets/images/teasers/mask-detection.png
-    alt: "Rectangular aggregations at the LHC"
-    title: "Mask detection COVID-19"
-    excerpt: "Detection of persons correclty wearing, not wearing and wrongly wearing masks."
-    url: "https://image-classif.herokuapp.com/"
-    btn_label: "Open"
-    btn_class: "btn--primary"
-
 ---
 
 
